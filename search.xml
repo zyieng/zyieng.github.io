@@ -4,19 +4,24 @@
     <title>Hello World</title>
     <url>/2021/05/27/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>umi-简介</title>
+    <url>/2021/05/28/umi-%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>大前端-个人提升角度分析</title>
@@ -79,5 +84,44 @@
 <h2 id="7-API-Gateway-amp-BFF"><a href="#7-API-Gateway-amp-BFF" class="headerlink" title="7. API Gateway &amp; BFF"></a>7. API Gateway &amp; BFF</h2><h3 id="BFF"><a href="#BFF" class="headerlink" title="BFF"></a>BFF</h3><p>BFF，即 Backends For Frontends (服务于前端的后端)，也就是服务器设计 API 时会考虑客户端的使用情况，在服务端根据不同的设备类型，返回不同客户端所需要的结果。BFF 模式，这种模式不会为所有的客户端创建通用的 API。而是创建多个 BFF 服务：一个用于 Web 前端、一个用于移动客户端（甚至一个用于 iOS，另一个用于 Android）等等。</p>
 <h2 id="8-大前端：IoT"><a href="#8-大前端：IoT" class="headerlink" title="8. 大前端：IoT"></a>8. 大前端：IoT</h2><p>Web 应用的架构相比于一个物联网系统，无非就是多了一层硬件层以及可选的协调层。</p>
 <h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><h2 id="10"><a href="#10" class="headerlink" title="10."></a>10.</h2><h2 id="11"><a href="#11" class="headerlink" title="11."></a>11.</h2><h2 id="12"><a href="#12" class="headerlink" title="12."></a>12.</h2>]]></content>
+  </entry>
+  <entry>
+    <title>网络学习笔记</title>
+    <url>/2021/06/07/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="2-为什么是大前端，不是大后端呢？"><a href="#2-为什么是大前端，不是大后端呢？" class="headerlink" title="2. 为什么是大前端，不是大后端呢？"></a>2. 为什么是大前端，不是大后端呢？</h2><ol>
+<li><p>前端，即面向用户交互，存在一系列的方式。</p>
+</li>
+<li><p>前端在变窄</p>
+</li>
+<li><p>JavaScript 易学、广泛使用、熟悉的语法</p>
+</li>
+<li><p>无处不在的 WebView</p>
+</li>
+</ol>
+<blockquote>
+<p>值得注意的是：对于某些领域而言，大前端技术并不是最好的技术，但是它是实现起来最快的技术，也因此特别适合于 MVP 原型构建。与此同时，前端技术的动态特性，特别适合于远程更新业务——只需要更新对应的代码，而不需要更新整个应用。</p>
+</blockquote>
+<blockquote class="pullquote mindmap mindmap-md"><ul>
+<li><a href="https://hunterx.xyz/hexo-simple-mindmap-plugin-intro.html">Hexo 的思维导图插件</a><ul>
+<li>前言</li>
+<li>使用方法<ul>
+<li>一</li>
+<li>二</li>
+<li>三</li>
+</ul>
+</li>
+<li>太长不看</li>
+<li>参考资料</li>
+<li>太长不看</li>
+<li>参考资料</li>
+<li>太长不看</li>
+<li>参考资料</li>
+<li>太长不看</li>
+<li>参考资料</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+]]></content>
   </entry>
 </search>
