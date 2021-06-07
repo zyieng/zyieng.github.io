@@ -24,61 +24,6 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>大前端-个人提升角度分析</title>
-    <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h2 id="1-前端所占比重"><a href="#1-前端所占比重" class="headerlink" title="1. 前端所占比重"></a>1. 前端所占比重</h2><p>比重：往往懂前端的而后端且先到更容易有较高地位。</p>
-<p> to c 前后端都无地位。</p>
-<p>引出观点：无论前后端，都需要具备全站的知识涵盖范围。</p>
-<h2 id="2-团队规模决定前端"><a href="#2-团队规模决定前端" class="headerlink" title="2. 团队规模决定前端"></a>2. 团队规模决定前端</h2><p>决定因素：&gt; 业务体量  &gt; 团队规模</p>
-<h2 id="3-流水线式开发"><a href="#3-流水线式开发" class="headerlink" title="3. 流水线式开发"></a>3. 流水线式开发</h2><p>大型组织，需要更明确的分工，以便于机械工的生产更多的应用。</p>
-<p>也因此需要更明确的分工，来解决效率的问题。</p>
-<p>工具支撑团队<br>框架开发团队<br>业务开发团队<br>DevOps 团队</p>
-<h2 id="4-客户端多样式"><a href="#4-客户端多样式" class="headerlink" title="4. 客户端多样式"></a>4. 客户端多样式</h2><p>客户端开发的需求：微信小程度、桌面客户端、跨平台应用等等。</p>
-<h2 id="5-新的领域"><a href="#5-新的领域" class="headerlink" title="5. 新的领域"></a>5. 新的领域</h2><p>新的领域，存在更多机会。</p>
-<p>边缘计算<br>区块链<br>客户端计算<br>……</p>
-<h2 id="6-业务熟悉度"><a href="#6-业务熟悉度" class="headerlink" title="6. 业务熟悉度"></a>6. 业务熟悉度</h2><p>业务不熟悉无法带领团队。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>网络学习笔记</title>
-    <url>/2021/06/07/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="2-为什么是大前端，不是大后端呢？"><a href="#2-为什么是大前端，不是大后端呢？" class="headerlink" title="2. 为什么是大前端，不是大后端呢？"></a>2. 为什么是大前端，不是大后端呢？</h2><ol>
-<li><p>前端，即面向用户交互，存在一系列的方式。</p>
-</li>
-<li><p>前端在变窄</p>
-</li>
-<li><p>JavaScript 易学、广泛使用、熟悉的语法</p>
-</li>
-<li><p>无处不在的 WebView</p>
-</li>
-</ol>
-<blockquote>
-<p>值得注意的是：对于某些领域而言，大前端技术并不是最好的技术，但是它是实现起来最快的技术，也因此特别适合于 MVP 原型构建。与此同时，前端技术的动态特性，特别适合于远程更新业务——只需要更新对应的代码，而不需要更新整个应用。</p>
-</blockquote>
-<blockquote class="pullquote mindmap mindmap-md"><ul>
-<li><a href="https://hunterx.xyz/hexo-simple-mindmap-plugin-intro.html">Hexo 的思维导图插件</a><ul>
-<li>前言</li>
-<li>使用方法<ul>
-<li>一</li>
-<li>二</li>
-<li>三</li>
-</ul>
-</li>
-<li>太长不看</li>
-<li>参考资料</li>
-<li>太长不看</li>
-<li>参考资料</li>
-<li>太长不看</li>
-<li>参考资料</li>
-<li>太长不看</li>
-<li>参考资料</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
     <title>大前端-是什么？</title>
     <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E6%98%AF%E4%BB%80%E4%B9%88/</url>
     <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><p>是什么：通过Web 开发相关的技术（WebView、JavaScript/TypeScript）所能开发、处理的领域。</p>
@@ -123,5 +68,36 @@
 <h2 id="7-API-Gateway-amp-BFF"><a href="#7-API-Gateway-amp-BFF" class="headerlink" title="7. API Gateway &amp; BFF"></a>7. API Gateway &amp; BFF</h2><h3 id="BFF"><a href="#BFF" class="headerlink" title="BFF"></a>BFF</h3><p>BFF，即 Backends For Frontends (服务于前端的后端)，也就是服务器设计 API 时会考虑客户端的使用情况，在服务端根据不同的设备类型，返回不同客户端所需要的结果。BFF 模式，这种模式不会为所有的客户端创建通用的 API。而是创建多个 BFF 服务：一个用于 Web 前端、一个用于移动客户端（甚至一个用于 iOS，另一个用于 Android）等等。</p>
 <h2 id="8-大前端：IoT"><a href="#8-大前端：IoT" class="headerlink" title="8. 大前端：IoT"></a>8. 大前端：IoT</h2><p>Web 应用的架构相比于一个物联网系统，无非就是多了一层硬件层以及可选的协调层。</p>
 <h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><h2 id="10"><a href="#10" class="headerlink" title="10."></a>10.</h2><h2 id="11"><a href="#11" class="headerlink" title="11."></a>11.</h2><h2 id="12"><a href="#12" class="headerlink" title="12."></a>12.</h2>]]></content>
+  </entry>
+  <entry>
+    <title>大前端-个人提升角度分析</title>
+    <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h2 id="1-前端所占比重"><a href="#1-前端所占比重" class="headerlink" title="1. 前端所占比重"></a>1. 前端所占比重</h2><p>比重：往往懂前端的而后端且先到更容易有较高地位。</p>
+<p> to c 前后端都无地位。</p>
+<p>引出观点：无论前后端，都需要具备全站的知识涵盖范围。</p>
+<h2 id="2-团队规模决定前端"><a href="#2-团队规模决定前端" class="headerlink" title="2. 团队规模决定前端"></a>2. 团队规模决定前端</h2><p>决定因素：&gt; 业务体量  &gt; 团队规模</p>
+<h2 id="3-流水线式开发"><a href="#3-流水线式开发" class="headerlink" title="3. 流水线式开发"></a>3. 流水线式开发</h2><p>大型组织，需要更明确的分工，以便于机械工的生产更多的应用。</p>
+<p>也因此需要更明确的分工，来解决效率的问题。</p>
+<p>工具支撑团队<br>框架开发团队<br>业务开发团队<br>DevOps 团队</p>
+<h2 id="4-客户端多样式"><a href="#4-客户端多样式" class="headerlink" title="4. 客户端多样式"></a>4. 客户端多样式</h2><p>客户端开发的需求：微信小程度、桌面客户端、跨平台应用等等。</p>
+<h2 id="5-新的领域"><a href="#5-新的领域" class="headerlink" title="5. 新的领域"></a>5. 新的领域</h2><p>新的领域，存在更多机会。</p>
+<p>边缘计算<br>区块链<br>客户端计算<br>……</p>
+<h2 id="6-业务熟悉度"><a href="#6-业务熟悉度" class="headerlink" title="6. 业务熟悉度"></a>6. 业务熟悉度</h2><p>业务不熟悉无法带领团队。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>网络学习笔记</title>
+    <url>/2021/06/07/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="1-数据是如何传输的"><a href="#1-数据是如何传输的" class="headerlink" title="1. 数据是如何传输的"></a>1. 数据是如何传输的</h1><h2 id="1-网络传输过程"><a href="#1-网络传输过程" class="headerlink" title="1. 网络传输过程"></a>1. 网络传输过程</h2><ol>
+<li>应用层<br>传递消息</li>
+<li>表示层<br>解密、编码等</li>
+<li>会话层<br>维持会话</li>
+<li>传输层<br>端对端的链接</li>
+<li>网络层<br>网络层收到传输层来的数据，加入路由信息，地址信息等，形成“包”。这些包就会在网络中传播（中间可能跳转多个路由器），到达对方的网络</li>
+<li>数据链路层<br>上层协议转换成lan地址，把消息换成“位”，主要进行<div class="text_need_explain">ARP<div class="text_explain">地址解析协议</div></div>等协议，加入本网中表示你PC的字段</li>
+<li>物理层<br>按照位在你网线中发送高低电压的信号</li>
+</ol>
+<blockquote class="pullquote mindmap mindmap-md"></blockquote>
+]]></content>
   </entry>
 </search>

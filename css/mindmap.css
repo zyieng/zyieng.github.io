@@ -94,6 +94,7 @@
 
 .mindmap {
 	width: inherit;
+    overflow: hidden;
 	border: 1px solid #ccc;
 }
 
