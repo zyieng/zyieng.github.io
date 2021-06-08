@@ -38,3 +38,12 @@
     bottom: 0;
     background: #fff;
 }
+
+.todo {
+    color: #E6A23C;
+}
+
+.title_img img {
+    max-width: 880px;
+    width: 100%;
+}

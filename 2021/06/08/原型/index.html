@@ -3,14 +3,14 @@
 
 	<head>
 		
-<title>网络学习笔记-Zyieng</title>
+<title>原型-Zyieng</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/banana.ico">
 
 
-<meta name="keywords" content="网络,">
+<meta name="keywords" content="Java Script,">
 <meta name="description" content="">
 
 
@@ -249,17 +249,21 @@
 <div class="header-bg ">
     <div class="bg-content">
         
+            <div class="title_img">
+                <img src="https://z3.ax1x.com/2021/06/08/2BbKdH.gif" alt="Quiet">
+            </div>
+            
                 <ul class="tag">
                     
                         
-                            <li><a href="/tags/网络">
-                                    网络
+                            <li><a href="/tags/Java Script">
+                                    Java Script
                                 </a></li>
                             
                                 
                 </ul>
                 <h1>
-                    网络学习笔记
+                    原型
                 </h1>
                 <div class="article-info">
                     <div class="article-author">
@@ -276,7 +280,7 @@
                                             Zyieng
                                         </a></span>
                                     <p>
-                                        2021-06-07 11:30:41
+                                        2021-06-08 09:33:45
                                     </p>
                     </div>
                 </div>
@@ -284,16 +288,21 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <h1 id="1-数据是如何传输的"><a href="#1-数据是如何传输的" class="headerlink" title="1. 数据是如何传输的"></a>1. 数据是如何传输的</h1><h2 id="1-网络传输过程"><a href="#1-网络传输过程" class="headerlink" title="1. 网络传输过程"></a>1. 网络传输过程</h2><ol>
-<li>应用层<br>传递消息</li>
-<li>表示层<br>解密、编码等</li>
-<li>会话层<br>维持会话</li>
-<li>传输层<br>端对端的链接</li>
-<li>网络层<br>网络层收到传输层来的数据，加入路由信息，地址信息等，形成“包”。这些包就会在网络中传播（中间可能跳转多个路由器），到达对方的网络</li>
-<li>数据链路层<br>上层协议转换成lan地址，把消息换成“位”，主要进行<div class="text_need_explain">ARP<div class="text_explain">地址解析协议</div></div>等协议，加入本网中表示你PC的字段</li>
-<li>物理层<br>按照位在你网线中发送高低电压的信号</li>
-</ol>
-<blockquote class="pullquote mindmap mindmap-md"></blockquote>
+        <h1 id="自己的理解"><a href="#自己的理解" class="headerlink" title="自己的理解"></a>自己的理解</h1><h2 id="从上到下"><a href="#从上到下" class="headerlink" title="从上到下"></a>从上到下</h2><p>我的理解，js的对象是一层层继承过来的，每层的一些属性都会记录在由该对象构造后的新对象的_protp_属性上。</p>
+<blockquote>
+<p>需要说明的是，像已经被构建为某个具体的对象（如对象、数组、字符串等）是一个本身不具有constructor的对象。但是它仍能调用这个方法，原因是因为他们都是由Object对象构建而来，而它有这个构造的方法。所以如果说你新建了一个具有某个属性的对象（如 let a = {name: ‘a’}），然后通过a.constructor去构建一个新对象，本身调用的是Object的构造方法。所以它的效果跟正常声明一个空对象是一样的，如下图。</p>
+</blockquote>
+<p><img src="https://z3.ax1x.com/2021/06/08/2BolvD.png" alt="糟糕！没有了！"></p>
+<p>在取新的被构建出来的对象的某个属性时，这里分为一下几种情况。</p>
+<p class="todo">有时间看看是否替换成表格能更加舒适</p>
+
+<p>第一、<br>该对象无这个属性，且继承过程中所涉及到的类也无此属性<br>返回undefniend<br>第二、<br>该对象无这个属性，且继承过程中某个类含有此属性<br>返回通过原型链可以拿到的最近的被继承类的属性值<br>第三、<br>该对象本身具有此属性，且继承过程中的某个类也含有该属性<br>返回自身的属性值</p>
+<blockquote>
+<p>可看出，在获取某个属性的时候，先判断按照自己本身，如若没有就接着通过原型链来获取在继承过程中，是否中间过程有该属性的类，有则返回里这个对象最近的这个属性。</p>
+</blockquote>
+<p class="todo">将来补充一下关系图</p>
+
+<h2 id="从下接着往下走"><a href="#从下接着往下走" class="headerlink" title="从下接着往下走"></a>从下接着往下走</h2><p>其实不难想象，把一个又一个还没有实例化的【类】抽象为我们熟知的类，然后将这种层层继承过来的过程想象成类的继承和实例化等，就可以通过面向对象的思路来去理解。那么js中的【类】是否可以也拥有传统面向对象的多态、继承等概念呢？<p class="todo">后期如果有了新的理解再补充。</p></p>
 
     </div>
 </div>
@@ -323,19 +332,12 @@
 </script>
 <div class="Last-Next">
     
-    <a href="/2021/06/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1/">
-        <div class="last">
-            <span>上一篇</span>
-            <p>数据结构-1</p>
-        </div>
-    </a>
-    
 
     
-    <a href="/2021/05/28/umi-%E7%AE%80%E4%BB%8B/">
+    <a href="/2021/06/08/%E6%B5%8F%E8%A7%88%E5%99%A8/">
         <div class="next">
             <span>下一篇</span>
-            <p>umi-简介</p>
+            <p>浏览器</p>
         </div>
     </a>
     

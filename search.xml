@@ -30,6 +30,32 @@
       </tags>
   </entry>
   <entry>
+    <title>原型</title>
+    <url>/2021/06/08/%E5%8E%9F%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="自己的理解"><a href="#自己的理解" class="headerlink" title="自己的理解"></a>自己的理解</h1><h2 id="从上到下"><a href="#从上到下" class="headerlink" title="从上到下"></a>从上到下</h2><p>我的理解，js的对象是一层层继承过来的，每层的一些属性都会记录在由该对象构造后的新对象的_protp_属性上。</p>
+<blockquote>
+<p>需要说明的是，像已经被构建为某个具体的对象（如对象、数组、字符串等）是一个本身不具有constructor的对象。但是它仍能调用这个方法，原因是因为他们都是由Object对象构建而来，而它有这个构造的方法。所以如果说你新建了一个具有某个属性的对象（如 let a = {name: ‘a’}），然后通过a.constructor去构建一个新对象，本身调用的是Object的构造方法。所以它的效果跟正常声明一个空对象是一样的，如下图。</p>
+</blockquote>
+<p><img src="https://z3.ax1x.com/2021/06/08/2BolvD.png" alt="糟糕！没有了！"></p>
+<p>在取新的被构建出来的对象的某个属性时，这里分为一下几种情况。</p>
+<p class="todo">有时间看看是否替换成表格能更加舒适</p>
+
+<p>第一、<br>该对象无这个属性，且继承过程中所涉及到的类也无此属性<br>返回undefniend<br>第二、<br>该对象无这个属性，且继承过程中某个类含有此属性<br>返回通过原型链可以拿到的最近的被继承类的属性值<br>第三、<br>该对象本身具有此属性，且继承过程中的某个类也含有该属性<br>返回自身的属性值</p>
+<blockquote>
+<p>可看出，在获取某个属性的时候，先判断按照自己本身，如若没有就接着通过原型链来获取在继承过程中，是否中间过程有该属性的类，有则返回里这个对象最近的这个属性。</p>
+</blockquote>
+<p class="todo">将来补充一下关系图</p>
+
+<h2 id="从下接着往下走"><a href="#从下接着往下走" class="headerlink" title="从下接着往下走"></a>从下接着往下走</h2><p>其实不难想象，把一个又一个还没有实例化的【类】抽象为我们熟知的类，然后将这种层层继承过来的过程想象成类的继承和实例化等，就可以通过面向对象的思路来去理解。那么js中的【类】是否可以也拥有传统面向对象的多态、继承等概念呢？<p class="todo">后期如果有了新的理解再补充。</p></p>
+]]></content>
+      <categories>
+        <category>Java Script</category>
+      </categories>
+      <tags>
+        <tag>Java Script</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大前端-个人提升角度分析</title>
     <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<h2 id="1-前端所占比重"><a href="#1-前端所占比重" class="headerlink" title="1. 前端所占比重"></a>1. 前端所占比重</h2><p>比重：往往懂前端的而后端且先到更容易有较高地位。</p>

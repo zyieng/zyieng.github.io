@@ -65,7 +65,7 @@
 
 .move {
     margin-top: -84px;
-    transition: margin-top .8s ease-in-out;
+    transition: margin-top .5s ease-in-out;
 }
 
 @media screen and (min-width:600px) {
