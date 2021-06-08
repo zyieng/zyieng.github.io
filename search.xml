@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>umi-简介</title>
-    <url>/2021/05/28/umi-%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>umi</category>
-      </categories>
-      <tags>
-        <tag>umi</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2021/05/27/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -28,6 +17,17 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>umi-简介</title>
+    <url>/2021/05/28/umi-%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>umi</category>
+      </categories>
+      <tags>
+        <tag>umi</tag>
+      </tags>
   </entry>
   <entry>
     <title>大前端-个人提升角度分析</title>
@@ -117,6 +117,32 @@
       </categories>
       <tags>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浏览器</title>
+    <url>/2021/06/08/%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="当在地址栏输入一个url后会发生什么？"><a href="#当在地址栏输入一个url后会发生什么？" class="headerlink" title="当在地址栏输入一个url后会发生什么？"></a>当在地址栏输入一个url后会发生什么？</h1><ol>
+<li>首先会解析域名，找到正确的ip地址，访问服务器。（此服务器为web服务器，如nginx）</li>
+<li>nginx会找对应的前端项目中获取html、css、js等资源。</li>
+<li>浏览器开始加载资源，如果js里有死循环可能会造成阻塞。</li>
+<li>在资源加载完毕后，如有ajax，ajax是浏览器层单独新建的一个进程，故在请求前后是不会阻塞</li>
+<li>ajax请求后，如有根据请求回的数据进行死循环，之前实现效果为不阻塞。（这个有待详细实验）</li>
+</ol>
+<p>html</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&#x27;div1&#x27;</span>&gt;</span>div1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>css</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-id">#div1</span>&#123;<br>    <span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>;<br>    <span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>;<br>    <span class="hljs-attribute">background-color</span>: <span class="hljs-string">&#x27;red&#x27;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>js</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func1</span> = <span class="hljs-title">setInterval</span>(<span class="hljs-params">()=&gt;&#123;</span></span><br><span class="hljs-params"><span class="hljs-function">    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;div1&#x27;</span>).style.backgroundColor = <span class="hljs-string">&#x27;blue&#x27;</span></span></span><br><span class="hljs-params"><span class="hljs-function">&#125;,<span class="hljs-number">1000</span></span>)</span><br><span class="hljs-function"></span><br><span class="hljs-function">// 假设<span class="hljs-title">ajax</span>是一个请求<span class="hljs-title">ajax</span>的异步函数 </span><br><span class="hljs-function"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func2</span> = <span class="hljs-title">ajax</span>(<span class="hljs-params">res</span>)</span>&#123;</span><br><span class="hljs-function">    <span class="hljs-title">while</span>(<span class="hljs-params"><span class="hljs-literal">true</span></span>) </span>&#123;<br>        <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;div1&#x27;</span>).style.backgroundColor = <span class="hljs-string">&#x27;green&#x27;</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>浏览器</category>
+      </categories>
+      <tags>
+        <tag>浏览器</tag>
       </tags>
   </entry>
   <entry>
