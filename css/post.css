@@ -62,7 +62,7 @@ input[type="checkbox"] {
     height: 20px;
     font-weight: bold;
     margin-right: 5px;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
 input[type="checkbox"]:checked+.mark::before {
