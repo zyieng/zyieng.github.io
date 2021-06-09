@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>RBAC</title>
+    <url>/2021/06/09/RBAC/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/05/27/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -27,6 +32,34 @@
       </categories>
       <tags>
         <tag>umi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人问题总结</title>
+    <url>/2021/06/09/%E4%B8%AA%E4%BA%BA%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>急躁，遇事先思考。</p>
+<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><p><input type="checkbox"> 1. 专注呼吸，调整心态。<br><input type="checkbox"> 2. 思考着急是为了什么？是否重要？为什么要给自己压力？<br><input type="checkbox"> 3. 做什么事情尽量慢一个步调，想象自己是一个慢悠悠的性子。<br><input type="checkbox"> 4. 可以适当的辅助一些运动。</p>
+]]></content>
+      <categories>
+        <category>个人提升</category>
+        <category>每日打卡</category>
+      </categories>
+      <tags>
+        <tag>个人提升</tag>
+        <tag>每日打卡</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>包管理</title>
+    <url>/2021/06/09/%E5%8C%85%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="如何引入node-modules里面的资源的？"><a href="#如何引入node-modules里面的资源的？" class="headerlink" title="如何引入node modules里面的资源的？"></a>如何引入node modules里面的资源的？</h1><p>在项目引入被封装成一个包的样式资源时，报错。原以为是包中关于icon的后缀名有问题，发现其它项目是可以直接用。不得不怀疑是否是路径存在问题。</p>
+<p>在大能的一步步指引下，终于明白我的问题点在哪了。首先我不了解这个包是如何被引进项目里的。我当时的认知停留在每个包文件下会有个入口文件，默认指向这个入口文件。这里其实还存在一个情况，如果该包里有一pakcage.json，里面有个main会指定这个包的入口文件。</p>
+]]></content>
+      <categories>
+        <category>wepack</category>
+      </categories>
+      <tags>
+        <tag>wepack</tag>
       </tags>
   </entry>
   <entry>
@@ -190,6 +223,24 @@
       </categories>
       <tags>
         <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目优化思路</title>
+    <url>/2021/06/09/%E9%A1%B9%E7%9B%AE%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/</url>
+    <content><![CDATA[<h1 id="为什么写？"><a href="#为什么写？" class="headerlink" title="为什么写？"></a>为什么写？</h1><p>为了理清自己的优化思路，顺便通过写文章来让自己始终在全局角度思考问题。</p>
+<h1 id="第一步-项目背景"><a href="#第一步-项目背景" class="headerlink" title="第一步 项目背景"></a>第一步 项目背景</h1><p>应用层包括web和小程序端，web一套权限系统，小程序一套权限系统。不排除后期会有web权限的相关小程序需求，如有此情况可能会需要将web的权限迁入到小程序中。业务在此无发细说，暂时寄存脑子里。</p>
+<p>并发量并不高，我分析处于平缓的趋势。</p>
+<h2 id="优化反向"><a href="#优化反向" class="headerlink" title="优化反向"></a>优化反向</h2><p>无论具体思路是什么，做的工作都是解耦。那么能解耦的地放如果放在项目结构这个角度的话，思路可以是业务与其它功能的解耦。所以只要分析到底都哪些这个项目里的功能不是属于业务的就都可以做解耦。这也只是理论上。实际得话真的是否需要解耦需要看它这个项目的长远发展和体量。</p>
+<h2 id="当前项目我认为可以优化的地方"><a href="#当前项目我认为可以优化的地方" class="headerlink" title="当前项目我认为可以优化的地方"></a>当前项目我认为可以优化的地方</h2><h3 id="项目架构层级"><a href="#项目架构层级" class="headerlink" title="项目架构层级"></a>项目架构层级</h3><ol>
+<li>权限问题：不知未来是否出现需要将权限系统互相打通。建议应用层这里单独抽离一个服务，用来分发前端资源。如果这个服务同时可以兼容后端那最好不过。如果这么思考，我觉得一个服务层再抽离两层，一个用来分发前端资源，一个用来后端这边的鉴权。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>大前端</category>
+      </categories>
+      <tags>
+        <tag>大前端</tag>
       </tags>
   </entry>
 </search>
