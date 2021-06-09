@@ -47,3 +47,25 @@
     max-width: 880px;
     width: 100%;
 }
+
+input[type="checkbox"] {
+   position: absolute;
+   clip: rect(0, 0, 0, 0)
+ }
+
+ .mark::before {  
+    content: '\a0';
+    display: inline-block;
+    border: 1px solid silver;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]:checked+.mark::before {
+    content: '\2713';
+    color: #FA8E53;
+}
