@@ -3,14 +3,14 @@
 
 	<head>
 		
-<title>项目优化思路-Zyieng</title>
+<title>数据结构-概览-Zyieng</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/banana.ico">
 
 
-<meta name="keywords" content="大前端,">
+<meta name="keywords" content="数据结构,">
 <meta name="description" content="">
 
 
@@ -252,14 +252,14 @@
                 <ul class="tag">
                     
                         
-                            <li><a href="/tags/大前端">
-                                    大前端
+                            <li><a href="/tags/数据结构">
+                                    数据结构
                                 </a></li>
                             
                                 
                 </ul>
                 <h1>
-                    项目优化思路
+                    数据结构-概览
                 </h1>
                 <div class="article-info">
                     <div class="article-author">
@@ -276,7 +276,7 @@
                                             Zyieng
                                         </a></span>
                                     <p>
-                                        2021-06-09 10:57:06
+                                        2021-06-07 17:38:54
                                     </p>
                     </div>
                 </div>
@@ -284,14 +284,28 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <h1 id="为什么写？"><a href="#为什么写？" class="headerlink" title="为什么写？"></a>为什么写？</h1><p>为了理清自己的优化思路，顺便通过写文章来让自己始终在全局角度思考问题。</p>
-<h1 id="第一步-项目背景"><a href="#第一步-项目背景" class="headerlink" title="第一步 项目背景"></a>第一步 项目背景</h1><p>应用层包括web和小程序端，web一套权限系统，小程序一套权限系统。不排除后期会有web权限的相关小程序需求，如有此情况可能会需要将web的权限迁入到小程序中。业务在此无发细说，暂时寄存脑子里。</p>
-<p>并发量并不高，我分析处于平缓的趋势。</p>
-<h2 id="优化反向"><a href="#优化反向" class="headerlink" title="优化反向"></a>优化反向</h2><p>无论具体思路是什么，做的工作都是解耦。那么能解耦的地放如果放在项目结构这个角度的话，思路可以是业务与其它功能的解耦。所以只要分析到底都哪些这个项目里的功能不是属于业务的就都可以做解耦。这也只是理论上。实际得话真的是否需要解耦需要看它这个项目的长远发展和体量。</p>
-<h2 id="当前项目我认为可以优化的地方"><a href="#当前项目我认为可以优化的地方" class="headerlink" title="当前项目我认为可以优化的地方"></a>当前项目我认为可以优化的地方</h2><h3 id="项目架构层级"><a href="#项目架构层级" class="headerlink" title="项目架构层级"></a>项目架构层级</h3><ol>
-<li>权限问题：不知未来是否出现需要将权限系统互相打通。建议应用层这里单独抽离一个服务，用来分发前端资源。如果这个服务同时可以兼容后端那最好不过。如果这么思考，我觉得一个服务层再抽离两层，一个用来分发前端资源，一个用来后端这边的鉴权。</li>
-</ol>
-
+        <h1 id="解决问题思路"><a href="#解决问题思路" class="headerlink" title="解决问题思路"></a>解决问题思路</h1><p>解决思路</p>
+<p><img style="width: 40%" src="https://z3.ax1x.com/2021/07/06/R7Dejf.png"></img></p>
+<h1 id="学习图谱"><a href="#学习图谱" class="headerlink" title="学习图谱"></a>学习图谱</h1><blockquote class="pullquote mindmap mindmap-md"><ul>
+<li>学习图谱<ul>
+<li>基础<ul>
+<li>基本数据结构</li>
+<li>大O(如何看复杂度)</li>
+</ul>
+</li>
+<li>解决问题<ul>
+<li>散列表</li>
+<li>图</li>
+<li>分治</li>
+<li>动态规划</li>
+<li>贪心</li>
+</ul>
+</li>
+<li>进一步学习其他10种算法</li>
+</ul>
+</li>
+</ul>
+</blockquote>
     </div>
 </div>
 <style>
@@ -320,19 +334,19 @@
 </script>
 <div class="Last-Next">
     
-    <a href="/2021/06/09/RBAC/">
+    <a href="/2021/06/08/%E6%B5%8F%E8%A7%88%E5%99%A8/">
         <div class="last">
             <span>上一篇</span>
-            <p>RBAC</p>
+            <p>浏览器</p>
         </div>
     </a>
     
 
     
-    <a href="/2021/06/08/%E5%8E%9F%E5%9E%8B/">
+    <a href="/2021/06/07/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
         <div class="next">
             <span>下一篇</span>
-            <p>原型</p>
+            <p>网络学习笔记</p>
         </div>
     </a>
     

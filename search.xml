@@ -172,14 +172,44 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构-1</title>
-    <url>/2021/06/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1/</url>
-    <content><![CDATA[<h1 id="大致有哪些？"><a href="#大致有哪些？" class="headerlink" title="大致有哪些？"></a>大致有哪些？</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>这里面有10个数据结构：数组、链表、栈、队列、散列表、二叉树、堆、跳表、图、Trie 树；</p>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>10个算法：递归、排序、二分查找、搜索、哈希算法、贪心算法、分治算法、回溯算法、动态规划、字符串匹配算法。</p>
-<blockquote>
-<p>掌握了这些基础的数据结构和算法，再学更加复杂的数据结构和算法，就会非常容易、非常快。</p>
+    <title>数据结构-基础</title>
+    <url>/2021/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><h1 id="O分析算法速度"><a href="#O分析算法速度" class="headerlink" title="O分析算法速度"></a>O分析算法速度</h1><h1 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><blockquote>
+<p>链表可以用来创建更高级的数据结构</p>
 </blockquote>
-]]></content>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构-概览</title>
+    <url>/2021/06/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A6%82%E8%A7%88/</url>
+    <content><![CDATA[<h1 id="解决问题思路"><a href="#解决问题思路" class="headerlink" title="解决问题思路"></a>解决问题思路</h1><p>解决思路</p>
+<p><img style="width: 40%" src="https://z3.ax1x.com/2021/07/06/R7Dejf.png"></img></p>
+<h1 id="学习图谱"><a href="#学习图谱" class="headerlink" title="学习图谱"></a>学习图谱</h1><blockquote class="pullquote mindmap mindmap-md"><ul>
+<li>学习图谱<ul>
+<li>基础<ul>
+<li>基本数据结构</li>
+<li>大O(如何看复杂度)</li>
+</ul>
+</li>
+<li>解决问题<ul>
+<li>散列表</li>
+<li>图</li>
+<li>分治</li>
+<li>动态规划</li>
+<li>贪心</li>
+</ul>
+</li>
+<li>进一步学习其他10种算法</li>
+</ul>
+</li>
+</ul>
+</blockquote>]]></content>
       <categories>
         <category>数据结构</category>
       </categories>
@@ -232,24 +262,6 @@
       </categories>
       <tags>
         <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>项目优化思路</title>
-    <url>/2021/06/09/%E9%A1%B9%E7%9B%AE%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/</url>
-    <content><![CDATA[<h1 id="为什么写？"><a href="#为什么写？" class="headerlink" title="为什么写？"></a>为什么写？</h1><p>为了理清自己的优化思路，顺便通过写文章来让自己始终在全局角度思考问题。</p>
-<h1 id="第一步-项目背景"><a href="#第一步-项目背景" class="headerlink" title="第一步 项目背景"></a>第一步 项目背景</h1><p>应用层包括web和小程序端，web一套权限系统，小程序一套权限系统。不排除后期会有web权限的相关小程序需求，如有此情况可能会需要将web的权限迁入到小程序中。业务在此无发细说，暂时寄存脑子里。</p>
-<p>并发量并不高，我分析处于平缓的趋势。</p>
-<h2 id="优化反向"><a href="#优化反向" class="headerlink" title="优化反向"></a>优化反向</h2><p>无论具体思路是什么，做的工作都是解耦。那么能解耦的地放如果放在项目结构这个角度的话，思路可以是业务与其它功能的解耦。所以只要分析到底都哪些这个项目里的功能不是属于业务的就都可以做解耦。这也只是理论上。实际得话真的是否需要解耦需要看它这个项目的长远发展和体量。</p>
-<h2 id="当前项目我认为可以优化的地方"><a href="#当前项目我认为可以优化的地方" class="headerlink" title="当前项目我认为可以优化的地方"></a>当前项目我认为可以优化的地方</h2><h3 id="项目架构层级"><a href="#项目架构层级" class="headerlink" title="项目架构层级"></a>项目架构层级</h3><ol>
-<li>权限问题：不知未来是否出现需要将权限系统互相打通。建议应用层这里单独抽离一个服务，用来分发前端资源。如果这个服务同时可以兼容后端那最好不过。如果这么思考，我觉得一个服务层再抽离两层，一个用来分发前端资源，一个用来后端这边的鉴权。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>大前端</category>
-      </categories>
-      <tags>
-        <tag>大前端</tag>
       </tags>
   </entry>
 </search>
