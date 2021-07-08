@@ -3,14 +3,14 @@
 
 	<head>
 		
-<title>RBAC-Zyieng</title>
+<title>nvm-node管理机制-Zyieng</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/banana.ico">
 
 
-<meta name="keywords" content="RBAC,">
+<meta name="keywords" content="nvm,">
 <meta name="description" content="">
 
 
@@ -250,20 +250,20 @@
     <div class="bg-content">
         
             <div class="title_img">
-                <img src="https://z3.ax1x.com/2021/07/08/RO7O1A.jpg" alt="Quiet">
+                <img src="https://z3.ax1x.com/2021/07/08/RO5KbD.jpg" alt="Quiet">
             </div>
             
                 <ul class="tag">
                     
                         
-                            <li><a href="/tags/RBAC">
-                                    RBAC
+                            <li><a href="/tags/nvm">
+                                    nvm
                                 </a></li>
                             
                                 
                 </ul>
                 <h1>
-                    RBAC
+                    nvm-node管理机制
                 </h1>
                 <div class="article-info">
                     <div class="article-author">
@@ -280,7 +280,7 @@
                                             Zyieng
                                         </a></span>
                                     <p>
-                                        2021-06-09 15:37:13
+                                        2021-07-08 17:19:49
                                     </p>
                     </div>
                 </div>
@@ -288,7 +288,11 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        
+        <h1 id="nvm是如何管理你的node版本的？"><a href="#nvm是如何管理你的node版本的？" class="headerlink" title="nvm是如何管理你的node版本的？"></a>nvm是如何管理你的node版本的？</h1><p>在你切换时他会在c盘下生成一个快捷方式，这个快捷方式会指向你当前版本的包的地址。然后系统这边的Node相关配置永远都指向这个c盘的这个生曾的快捷方式即可。</p>
+<p>当你删除c盘下的快捷方式时输入</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvm list</span><br></code></pre></td></tr></table></figure>
+<p>你会发现当前没有选中的node版本。正常你在使用哪个包前面会有【*】标识。<br>可以通过这种方式来间接的去证明上述管理Node版本的机制。</p>
+
     </div>
 </div>
 <style>
@@ -317,19 +321,12 @@
 </script>
 <div class="Last-Next">
     
-    <a href="/2021/06/09/%E5%8C%85%E7%AE%A1%E7%90%86/">
-        <div class="last">
-            <span>上一篇</span>
-            <p>包管理</p>
-        </div>
-    </a>
-    
 
     
-    <a href="/2021/06/08/%E5%8E%9F%E5%9E%8B/">
+    <a href="/2021/07/08/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90/">
         <div class="next">
             <span>下一篇</span>
-            <p>原型</p>
+            <p>浏览器获取资源</p>
         </div>
     </a>
     

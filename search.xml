@@ -4,6 +4,12 @@
     <title>RBAC</title>
     <url>/2021/06/09/RBAC/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>RBAC</category>
+      </categories>
+      <tags>
+        <tag>RBAC</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -32,6 +38,21 @@
       </categories>
       <tags>
         <tag>umi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nvm-node管理机制</title>
+    <url>/2021/07/08/nvm-node%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/</url>
+    <content><![CDATA[<h1 id="nvm是如何管理你的node版本的？"><a href="#nvm是如何管理你的node版本的？" class="headerlink" title="nvm是如何管理你的node版本的？"></a>nvm是如何管理你的node版本的？</h1><p>在你切换时他会在c盘下生成一个快捷方式，这个快捷方式会指向你当前版本的包的地址。然后系统这边的Node相关配置永远都指向这个c盘的这个生曾的快捷方式即可。</p>
+<p>当你删除c盘下的快捷方式时输入</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvm list</span><br></code></pre></td></tr></table></figure>
+<p>你会发现当前没有选中的node版本。正常你在使用哪个包前面会有【*】标识。<br>可以通过这种方式来间接的去证明上述管理Node版本的机制。</p>
+]]></content>
+      <categories>
+        <category>nvm</category>
+      </categories>
+      <tags>
+        <tag>nvm</tag>
       </tags>
   </entry>
   <entry>
@@ -65,10 +86,12 @@
 <p>在大能的一步步指引下，终于明白我的问题点在哪了。首先我不了解这个包是如何被引进项目里的。我当时的认知停留在每个包文件下会有个入口文件，默认指向这个入口文件。这里其实还存在一个情况，如果该包里有一pakcage.json，里面有个main会指定这个包的入口文件。</p>
 ]]></content>
       <categories>
-        <category>wepack</category>
+        <category>package</category>
+        <category>webpack</category>
       </categories>
       <tags>
-        <tag>wepack</tag>
+        <tag>package</tag>
+        <tag>webpack</tag>
       </tags>
   </entry>
   <entry>
@@ -172,20 +195,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构-基础</title>
-    <url>/2021/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><h1 id="O分析算法速度"><a href="#O分析算法速度" class="headerlink" title="O分析算法速度"></a>O分析算法速度</h1><h1 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><blockquote>
-<p>链表可以用来创建更高级的数据结构</p>
-</blockquote>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构-概览</title>
     <url>/2021/06/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A6%82%E8%A7%88/</url>
     <content><![CDATA[<h1 id="解决问题思路"><a href="#解决问题思路" class="headerlink" title="解决问题思路"></a>解决问题思路</h1><p>解决思路</p>
@@ -244,6 +253,31 @@
       </tags>
   </entry>
   <entry>
+    <title>浏览器获取资源</title>
+    <url>/2021/07/08/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90/</url>
+    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>最近开发的项目中有个奇怪的现象。<br>每次更新镜像，获取资源时如果在未获取完时刷新就会导致资源长时间获取被截断。（对资源大的有有明显影响）</p>
+<h1 id="触发现象"><a href="#触发现象" class="headerlink" title="触发现象"></a>触发现象</h1><p>更新镜像时在模块未加载时更新</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><ol>
+<li>更新镜像会导致线上对应的资源会更新。</li>
+<li>获取数据时按照之前的方式获取。</li>
+<li>刷新导致之后的资源还是用之前错误的方式获取。</li>
+<li>浏览器dns解析时会有一些缓存，可以试着猜想一下请求的缓存时的相应旧的请求方式是否也会缓存在计算机中。下回遇到可以尝试清系统缓存看看。</li>
+</ol>
+<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><ol>
+<li>减小大资源。可通过打包时的相应配置去控制。</li>
+<li>了解其机制，从根本原因下手。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>网络</category>
+        <category>浏览器</category>
+      </categories>
+      <tags>
+        <tag>浏览器</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网络学习笔记</title>
     <url>/2021/06/07/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="1-数据是如何传输的"><a href="#1-数据是如何传输的" class="headerlink" title="1. 数据是如何传输的"></a>1. 数据是如何传输的</h1><h2 id="1-网络传输过程"><a href="#1-网络传输过程" class="headerlink" title="1. 网络传输过程"></a>1. 网络传输过程</h2><ol>
@@ -262,6 +296,20 @@
       </categories>
       <tags>
         <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构-基础</title>
+    <url>/2021/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><h1 id="O分析算法速度"><a href="#O分析算法速度" class="headerlink" title="O分析算法速度"></a>O分析算法速度</h1><h1 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><blockquote>
+<p>链表可以用来创建更高级的数据结构</p>
+</blockquote>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
       </tags>
   </entry>
 </search>

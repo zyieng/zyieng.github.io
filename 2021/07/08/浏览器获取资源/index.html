@@ -3,14 +3,14 @@
 
 	<head>
 		
-<title>RBAC-Zyieng</title>
+<title>浏览器获取资源-Zyieng</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/banana.ico">
 
 
-<meta name="keywords" content="RBAC,">
+<meta name="keywords" content="浏览器,网络,">
 <meta name="description" content="">
 
 
@@ -250,20 +250,24 @@
     <div class="bg-content">
         
             <div class="title_img">
-                <img src="https://z3.ax1x.com/2021/07/08/RO7O1A.jpg" alt="Quiet">
+                <img src="https://z3.ax1x.com/2021/07/08/RO6XVI.jpg" alt="Quiet">
             </div>
             
                 <ul class="tag">
                     
                         
-                            <li><a href="/tags/RBAC">
-                                    RBAC
+                            <li><a href="/tags/浏览器">
+                                    浏览器
+                                </a></li>
+                            
+                            <li><a href="/tags/网络">
+                                    网络
                                 </a></li>
                             
                                 
                 </ul>
                 <h1>
-                    RBAC
+                    浏览器获取资源
                 </h1>
                 <div class="article-info">
                     <div class="article-author">
@@ -280,7 +284,7 @@
                                             Zyieng
                                         </a></span>
                                     <p>
-                                        2021-06-09 15:37:13
+                                        2021-07-08 17:13:26
                                     </p>
                     </div>
                 </div>
@@ -288,7 +292,19 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        
+        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>最近开发的项目中有个奇怪的现象。<br>每次更新镜像，获取资源时如果在未获取完时刷新就会导致资源长时间获取被截断。（对资源大的有有明显影响）</p>
+<h1 id="触发现象"><a href="#触发现象" class="headerlink" title="触发现象"></a>触发现象</h1><p>更新镜像时在模块未加载时更新</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><ol>
+<li>更新镜像会导致线上对应的资源会更新。</li>
+<li>获取数据时按照之前的方式获取。</li>
+<li>刷新导致之后的资源还是用之前错误的方式获取。</li>
+<li>浏览器dns解析时会有一些缓存，可以试着猜想一下请求的缓存时的相应旧的请求方式是否也会缓存在计算机中。下回遇到可以尝试清系统缓存看看。</li>
+</ol>
+<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><ol>
+<li>减小大资源。可通过打包时的相应配置去控制。</li>
+<li>了解其机制，从根本原因下手。</li>
+</ol>
+
     </div>
 </div>
 <style>
@@ -317,19 +333,19 @@
 </script>
 <div class="Last-Next">
     
-    <a href="/2021/06/09/%E5%8C%85%E7%AE%A1%E7%90%86/">
+    <a href="/2021/07/08/nvm-node%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/">
         <div class="last">
             <span>上一篇</span>
-            <p>包管理</p>
+            <p>nvm-node管理机制</p>
         </div>
     </a>
     
 
     
-    <a href="/2021/06/08/%E5%8E%9F%E5%9E%8B/">
+    <a href="/2021/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E7%A1%80/">
         <div class="next">
             <span>下一篇</span>
-            <p>原型</p>
+            <p>数据结构-基础</p>
         </div>
     </a>
     
