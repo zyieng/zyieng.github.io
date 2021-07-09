@@ -76,6 +76,10 @@
         font-size: 1.1em;
         flex-direction: column;
     }
+    .header-bg .bg-content img {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .article-content img {

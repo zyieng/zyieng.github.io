@@ -288,7 +288,7 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <h1 id="nvm是如何管理你的node版本的？"><a href="#nvm是如何管理你的node版本的？" class="headerlink" title="nvm是如何管理你的node版本的？"></a>nvm是如何管理你的node版本的？</h1><p>在你切换时他会在c盘下生成一个快捷方式，这个快捷方式会指向你当前版本的包的地址。然后系统这边的Node相关配置永远都指向这个c盘的这个生曾的快捷方式即可。</p>
+        <h1 id="nvm是如何管理你的node版本的？"><a href="#nvm是如何管理你的node版本的？" class="headerlink" title="nvm是如何管理你的node版本的？"></a>nvm是如何管理你的node版本的？</h1><p>在你切换时他会在c盘下生成一个快捷方式，这个快捷方式会指向你当前版本的包的地址。然后系统这边的Node相关配置永远都指向这个c盘的这个生成的快捷方式即可。</p>
 <p>当你删除c盘下的快捷方式时输入</p>
 <figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvm list</span><br></code></pre></td></tr></table></figure>
 <p>你会发现当前没有选中的node版本。正常你在使用哪个包前面会有【*】标识。<br>可以通过这种方式来间接的去证明上述管理Node版本的机制。</p>

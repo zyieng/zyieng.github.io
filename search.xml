@@ -30,6 +30,21 @@
 ]]></content>
   </entry>
   <entry>
+    <title>nvm-node管理机制</title>
+    <url>/2021/07/08/nvm-node%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/</url>
+    <content><![CDATA[<h1 id="nvm是如何管理你的node版本的？"><a href="#nvm是如何管理你的node版本的？" class="headerlink" title="nvm是如何管理你的node版本的？"></a>nvm是如何管理你的node版本的？</h1><p>在你切换时他会在c盘下生成一个快捷方式，这个快捷方式会指向你当前版本的包的地址。然后系统这边的Node相关配置永远都指向这个c盘的这个生成的快捷方式即可。</p>
+<p>当你删除c盘下的快捷方式时输入</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvm list</span><br></code></pre></td></tr></table></figure>
+<p>你会发现当前没有选中的node版本。正常你在使用哪个包前面会有【*】标识。<br>可以通过这种方式来间接的去证明上述管理Node版本的机制。</p>
+]]></content>
+      <categories>
+        <category>nvm</category>
+      </categories>
+      <tags>
+        <tag>nvm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>umi-简介</title>
     <url>/2021/05/28/umi-%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[]]></content>
@@ -41,18 +56,18 @@
       </tags>
   </entry>
   <entry>
-    <title>nvm-node管理机制</title>
-    <url>/2021/07/08/nvm-node%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/</url>
-    <content><![CDATA[<h1 id="nvm是如何管理你的node版本的？"><a href="#nvm是如何管理你的node版本的？" class="headerlink" title="nvm是如何管理你的node版本的？"></a>nvm是如何管理你的node版本的？</h1><p>在你切换时他会在c盘下生成一个快捷方式，这个快捷方式会指向你当前版本的包的地址。然后系统这边的Node相关配置永远都指向这个c盘的这个生曾的快捷方式即可。</p>
-<p>当你删除c盘下的快捷方式时输入</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvm list</span><br></code></pre></td></tr></table></figure>
-<p>你会发现当前没有选中的node版本。正常你在使用哪个包前面会有【*】标识。<br>可以通过这种方式来间接的去证明上述管理Node版本的机制。</p>
+    <title>包管理</title>
+    <url>/2021/06/09/%E5%8C%85%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="如何引入node-modules里面的资源的？"><a href="#如何引入node-modules里面的资源的？" class="headerlink" title="如何引入node modules里面的资源的？"></a>如何引入node modules里面的资源的？</h1><p>在项目引入被封装成一个包的样式资源时，报错。原以为是包中关于icon的后缀名有问题，发现其它项目是可以直接用。不得不怀疑是否是路径存在问题。</p>
+<p>在大能的一步步指引下，终于明白我的问题点在哪了。首先我不了解这个包是如何被引进项目里的。我当时的认知停留在每个包文件下会有个入口文件，默认指向这个入口文件。这里其实还存在一个情况，如果该包里有一pakcage.json，里面有个main会指定这个包的入口文件。</p>
 ]]></content>
       <categories>
-        <category>nvm</category>
+        <category>package</category>
+        <category>webpack</category>
       </categories>
       <tags>
-        <tag>nvm</tag>
+        <tag>package</tag>
+        <tag>webpack</tag>
       </tags>
   </entry>
   <entry>
@@ -80,21 +95,6 @@
       </tags>
   </entry>
   <entry>
-    <title>包管理</title>
-    <url>/2021/06/09/%E5%8C%85%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h1 id="如何引入node-modules里面的资源的？"><a href="#如何引入node-modules里面的资源的？" class="headerlink" title="如何引入node modules里面的资源的？"></a>如何引入node modules里面的资源的？</h1><p>在项目引入被封装成一个包的样式资源时，报错。原以为是包中关于icon的后缀名有问题，发现其它项目是可以直接用。不得不怀疑是否是路径存在问题。</p>
-<p>在大能的一步步指引下，终于明白我的问题点在哪了。首先我不了解这个包是如何被引进项目里的。我当时的认知停留在每个包文件下会有个入口文件，默认指向这个入口文件。这里其实还存在一个情况，如果该包里有一pakcage.json，里面有个main会指定这个包的入口文件。</p>
-]]></content>
-      <categories>
-        <category>package</category>
-        <category>webpack</category>
-      </categories>
-      <tags>
-        <tag>package</tag>
-        <tag>webpack</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>原型</title>
     <url>/2021/06/08/%E5%8E%9F%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="自己的理解"><a href="#自己的理解" class="headerlink" title="自己的理解"></a>自己的理解</h1><h2 id="从上到下"><a href="#从上到下" class="headerlink" title="从上到下"></a>从上到下</h2><p>我的理解，js的对象是一层层继承过来的，每层的一些属性都会记录在由该对象构造后的新对象的_protp_属性上。</p>
@@ -118,28 +118,6 @@
       </categories>
       <tags>
         <tag>Java Script</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大前端-个人提升角度分析</title>
-    <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h2 id="1-前端所占比重"><a href="#1-前端所占比重" class="headerlink" title="1. 前端所占比重"></a>1. 前端所占比重</h2><p>比重：往往懂前端的而后端且先到更容易有较高地位。</p>
-<p> to c 前后端都无地位。</p>
-<p>引出观点：无论前后端，都需要具备全站的知识涵盖范围。</p>
-<h2 id="2-团队规模决定前端"><a href="#2-团队规模决定前端" class="headerlink" title="2. 团队规模决定前端"></a>2. 团队规模决定前端</h2><p>决定因素：&gt; 业务体量  &gt; 团队规模</p>
-<h2 id="3-流水线式开发"><a href="#3-流水线式开发" class="headerlink" title="3. 流水线式开发"></a>3. 流水线式开发</h2><p>大型组织，需要更明确的分工，以便于机械工的生产更多的应用。</p>
-<p>也因此需要更明确的分工，来解决效率的问题。</p>
-<p>工具支撑团队<br>框架开发团队<br>业务开发团队<br>DevOps 团队</p>
-<h2 id="4-客户端多样式"><a href="#4-客户端多样式" class="headerlink" title="4. 客户端多样式"></a>4. 客户端多样式</h2><p>客户端开发的需求：微信小程度、桌面客户端、跨平台应用等等。</p>
-<h2 id="5-新的领域"><a href="#5-新的领域" class="headerlink" title="5. 新的领域"></a>5. 新的领域</h2><p>新的领域，存在更多机会。</p>
-<p>边缘计算<br>区块链<br>客户端计算<br>……</p>
-<h2 id="6-业务熟悉度"><a href="#6-业务熟悉度" class="headerlink" title="6. 业务熟悉度"></a>6. 业务熟悉度</h2><p>业务不熟悉无法带领团队。</p>
-]]></content>
-      <categories>
-        <category>大前端</category>
-      </categories>
-      <tags>
-        <tag>大前端</tag>
       </tags>
   </entry>
   <entry>
@@ -192,6 +170,42 @@
       </categories>
       <tags>
         <tag>大前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大前端-个人提升角度分析</title>
+    <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h2 id="1-前端所占比重"><a href="#1-前端所占比重" class="headerlink" title="1. 前端所占比重"></a>1. 前端所占比重</h2><p>比重：往往懂前端的而后端且先到更容易有较高地位。</p>
+<p> to c 前后端都无地位。</p>
+<p>引出观点：无论前后端，都需要具备全站的知识涵盖范围。</p>
+<h2 id="2-团队规模决定前端"><a href="#2-团队规模决定前端" class="headerlink" title="2. 团队规模决定前端"></a>2. 团队规模决定前端</h2><p>决定因素：&gt; 业务体量  &gt; 团队规模</p>
+<h2 id="3-流水线式开发"><a href="#3-流水线式开发" class="headerlink" title="3. 流水线式开发"></a>3. 流水线式开发</h2><p>大型组织，需要更明确的分工，以便于机械工的生产更多的应用。</p>
+<p>也因此需要更明确的分工，来解决效率的问题。</p>
+<p>工具支撑团队<br>框架开发团队<br>业务开发团队<br>DevOps 团队</p>
+<h2 id="4-客户端多样式"><a href="#4-客户端多样式" class="headerlink" title="4. 客户端多样式"></a>4. 客户端多样式</h2><p>客户端开发的需求：微信小程度、桌面客户端、跨平台应用等等。</p>
+<h2 id="5-新的领域"><a href="#5-新的领域" class="headerlink" title="5. 新的领域"></a>5. 新的领域</h2><p>新的领域，存在更多机会。</p>
+<p>边缘计算<br>区块链<br>客户端计算<br>……</p>
+<h2 id="6-业务熟悉度"><a href="#6-业务熟悉度" class="headerlink" title="6. 业务熟悉度"></a>6. 业务熟悉度</h2><p>业务不熟悉无法带领团队。</p>
+]]></content>
+      <categories>
+        <category>大前端</category>
+      </categories>
+      <tags>
+        <tag>大前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构-基础</title>
+    <url>/2021/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><h1 id="O分析算法速度"><a href="#O分析算法速度" class="headerlink" title="O分析算法速度"></a>O分析算法速度</h1><h1 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><blockquote>
+<p>链表可以用来创建更高级的数据结构</p>
+</blockquote>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -296,20 +310,6 @@
       </categories>
       <tags>
         <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构-基础</title>
-    <url>/2021/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><h1 id="O分析算法速度"><a href="#O分析算法速度" class="headerlink" title="O分析算法速度"></a>O分析算法速度</h1><h1 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><blockquote>
-<p>链表可以用来创建更高级的数据结构</p>
-</blockquote>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
       </tags>
   </entry>
 </search>
