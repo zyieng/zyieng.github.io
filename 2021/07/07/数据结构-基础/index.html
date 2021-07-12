@@ -288,10 +288,36 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><h1 id="O分析算法速度"><a href="#O分析算法速度" class="headerlink" title="O分析算法速度"></a>O分析算法速度</h1><h1 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><blockquote>
+        <h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><ol>
+<li>有序的</li>
+<li>每次一分为二</li>
+<li>目标数量越多，优势越大</li>
+<li>复杂度O(logn)<blockquote>
+<p>n个目标对象中利用二分法查找某个值 = (2的几次方 = n)</p>
+</blockquote>
+</li>
+</ol>
+<p>下图为二分（log2n）和正常按顺序去计算（y=x）的图像。在大于0的情况，也就是实际中任何情况下二分法的计算次数会小于线性。<br><img src="https://z3.ax1x.com/2021/07/12/WPYbuQ.png" alt="WPGG5V.png"></p>
+<h1 id="O分析算法速度"><a href="#O分析算法速度" class="headerlink" title="O分析算法速度"></a>O分析算法速度</h1><ul>
+<li>是什么？<br>在目标数据量为n时，该功能模块需要做几次运算，是衡量算法的性能的一个衡量标准。</li>
+<li>作用<br>衡量算法的性能。</li>
+</ul>
+<h1 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>每次都会从内存中取出单位长度的空间</p>
+<ol>
+<li>如若当前要插入的东西大于这个单位则会往后窜超出的部分。这个情况下的计算会很浪费时间。</li>
+<li>如若小于这个单位，则这些多余的空间会造成浪费，别人无法使用。</li>
+</ol>
+<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><blockquote>
 <p>链表可以用来创建更高级的数据结构</p>
 </blockquote>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1>
+<h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><p>正常存、然后通过指针来联系各个元素之间的对应关系：</p>
+<ol>
+<li>可以是有方向的，顺序的-【链表】</li>
+<li>也可以是闭环的等-【图】</li>
+<li>可以是一对多，想树一样的分支-【树】</li>
+</ol>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>可以解决数组的空间开辟问题。</p>
+
     </div>
 </div>
 <style>
