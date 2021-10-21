@@ -30,14 +30,17 @@
 ]]></content>
   </entry>
   <entry>
-    <title>umi-简介</title>
-    <url>/2021/05/28/umi-%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[]]></content>
+    <title>js观察者模式实现</title>
+    <url>/2021/10/21/js%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h1 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>角色：通知者和观察者<br>通知者：有变化通知观察者<br>观察者：收到变化响应变化</p>
+<h2 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs ecmascript">// 通知者<br>class Subject &#123;<br>  constructor() &#123;<br>    this.handlerEmit = []<br>  &#125;<br><br>  notice() &#123;<br>    this.handlerEmit.forEach((fn) =&gt; fn())<br>  &#125;<br>&#125;<br><br>// 观察者A<br>class ObserverA &#123;<br>  constructor() &#123;<br>      this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>// 观察者B<br>class ObserverB &#123;<br>  constructor() &#123;<br>    this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>const obA = new ObserverA()<br>const obB = new ObserverB()<br>const subject = new Subject()<br>subject.handlerEmit.push(obA,obB)<br>subject.notice()<br></code></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>umi</category>
+        <category>设计模式</category>
+        <category>工厂模式</category>
       </categories>
       <tags>
-        <tag>umi</tag>
+        <tag>设计模式</tag>
+        <tag>工厂模式</tag>
       </tags>
   </entry>
   <entry>
@@ -56,6 +59,41 @@
       </tags>
   </entry>
   <entry>
+    <title>umi-简介</title>
+    <url>/2021/05/28/umi-%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>umi</category>
+      </categories>
+      <tags>
+        <tag>umi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人问题总结</title>
+    <url>/2021/06/09/%E4%B8%AA%E4%BA%BA%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>急躁，遇事先思考。</p>
+<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><input type="checkbox" value="check1" id="check1">
+<label for="check1" class="mark">1. 专注呼吸，调整心态。</label >
+<input type="checkbox" value="check2" id="check2">
+<label for="check2" class="mark">2. 思考着急是为了什么？是否重要？为什么要给自己压力？</label >
+<input type="checkbox" value="check3" id="check3">
+<label for="check3" class="mark">3. 做什么事情尽量慢一个步调，想象自己是一个慢悠悠的性子。</label >
+<input type="checkbox" value="check4" id="check4">
+<label for="check4" class="mark">4. 可以适当的辅助一些运动。</label >
+<input type="checkbox" value="check5" id="check5">
+<label for="check5" class="mark">5. 每当做出决定前先考虑是否可以这么做？这么做的好处是什么？这么做是否有意义？</label >
+]]></content>
+      <categories>
+        <category>个人提升</category>
+        <category>每日打卡</category>
+      </categories>
+      <tags>
+        <tag>个人提升</tag>
+        <tag>每日打卡</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>包管理</title>
     <url>/2021/06/09/%E5%8C%85%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h1 id="如何引入node-modules里面的资源的？"><a href="#如何引入node-modules里面的资源的？" class="headerlink" title="如何引入node modules里面的资源的？"></a>如何引入node modules里面的资源的？</h1><p>在项目引入被封装成一个包的样式资源时，报错。原以为是包中关于icon的后缀名有问题，发现其它项目是可以直接用。不得不怀疑是否是路径存在问题。</p>
@@ -68,6 +106,28 @@
       <tags>
         <tag>package</tag>
         <tag>webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大前端-个人提升角度分析</title>
+    <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h2 id="1-前端所占比重"><a href="#1-前端所占比重" class="headerlink" title="1. 前端所占比重"></a>1. 前端所占比重</h2><p>比重：往往懂前端的而后端且先到更容易有较高地位。</p>
+<p> to c 前后端都无地位。</p>
+<p>引出观点：无论前后端，都需要具备全站的知识涵盖范围。</p>
+<h2 id="2-团队规模决定前端"><a href="#2-团队规模决定前端" class="headerlink" title="2. 团队规模决定前端"></a>2. 团队规模决定前端</h2><p>决定因素：&gt; 业务体量  &gt; 团队规模</p>
+<h2 id="3-流水线式开发"><a href="#3-流水线式开发" class="headerlink" title="3. 流水线式开发"></a>3. 流水线式开发</h2><p>大型组织，需要更明确的分工，以便于机械工的生产更多的应用。</p>
+<p>也因此需要更明确的分工，来解决效率的问题。</p>
+<p>工具支撑团队<br>框架开发团队<br>业务开发团队<br>DevOps 团队</p>
+<h2 id="4-客户端多样式"><a href="#4-客户端多样式" class="headerlink" title="4. 客户端多样式"></a>4. 客户端多样式</h2><p>客户端开发的需求：微信小程度、桌面客户端、跨平台应用等等。</p>
+<h2 id="5-新的领域"><a href="#5-新的领域" class="headerlink" title="5. 新的领域"></a>5. 新的领域</h2><p>新的领域，存在更多机会。</p>
+<p>边缘计算<br>区块链<br>客户端计算<br>……</p>
+<h2 id="6-业务熟悉度"><a href="#6-业务熟悉度" class="headerlink" title="6. 业务熟悉度"></a>6. 业务熟悉度</h2><p>业务不熟悉无法带领团队。</p>
+]]></content>
+      <categories>
+        <category>大前端</category>
+      </categories>
+      <tags>
+        <tag>大前端</tag>
       </tags>
   </entry>
   <entry>
@@ -97,17 +157,55 @@
       </tags>
   </entry>
   <entry>
-    <title>js观察者模式实现</title>
-    <url>/2021/10/21/js%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<h1 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>角色：通知者和观察者<br>通知者：有变化通知观察者<br>观察者：收到变化响应变化</p>
-<h2 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs ecmascript">// 通知者<br>class Subject &#123;<br>  constructor() &#123;<br>    this.handlerEmit = []<br>  &#125;<br><br>  notice() &#123;<br>    this.handlerEmit.forEach((fn) =&gt; fn())<br>  &#125;<br>&#125;<br><br>// 观察者A<br>class ObserverA &#123;<br>  constructor() &#123;<br>      this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>// 观察者B<br>class ObserverB &#123;<br>  constructor() &#123;<br>    this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>const obA = new ObserverA()<br>const obB = new ObserverB()<br>const subject = new Subject()<br>subject.handlerEmit.push(obA,obB)<br>subject.notice()<br></code></pre></td></tr></table></figure>]]></content>
+    <title>大前端-是什么？</title>
+    <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E6%98%AF%E4%BB%80%E4%B9%88/</url>
+    <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><p>是什么：通过Web 开发相关的技术（WebView、JavaScript/TypeScript）所能开发、处理的领域。</p>
+<p>涵盖领域：后端（Node.js 如 BFF 层、Serverless）、HTML 5 游戏、物联网、嵌入式应用、移动应用、桌面应用。</p>
+<p>特点：一次开发，多种平台</p>
+<h2 id="2-为什么是大前端，不是大后端呢？"><a href="#2-为什么是大前端，不是大后端呢？" class="headerlink" title="2. 为什么是大前端，不是大后端呢？"></a>2. 为什么是大前端，不是大后端呢？</h2><ol>
+<li><p>前端，即面向用户交互，存在一系列的方式。</p>
+</li>
+<li><p>前端在变窄</p>
+</li>
+<li><p>JavaScript 易学、广泛使用、熟悉的语法</p>
+</li>
+<li><p>无处不在的 WebView</p>
+</li>
+</ol>
+<blockquote>
+<p>值得注意的是：对于某些领域而言，大前端技术并不是最好的技术，但是它是实现起来最快的技术，也因此特别适合于 MVP 原型构建。与此同时，前端技术的动态特性，特别适合于远程更新业务——只需要更新对应的代码，而不需要更新整个应用。</p>
+</blockquote>
+<h2 id="3-大前端的技术领域"><a href="#3-大前端的技术领域" class="headerlink" title="3. 大前端的技术领域"></a>3. 大前端的技术领域</h2><ol>
+<li> Web 前端</li>
+<li> GUI</li>
+<li> 游戏</li>
+<li> 物联网</li>
+<li> 移动端</li>
+<li> AR/VR</li>
+</ol>
+<h2 id="4-如何成为大前端？"><a href="#4-如何成为大前端？" class="headerlink" title="4. 如何成为大前端？"></a>4. 如何成为大前端？</h2><p>所谓的前端 in 后端，便是在后端开发中，使用前端相关的语言和技术栈。最典型的场景，便是使用 Node.js 开发后端服务。</p>
+<h2 id="5-服务端渲染"><a href="#5-服务端渲染" class="headerlink" title="5. 服务端渲染"></a>5. 服务端渲染</h2><p>JavaScript，它的动态语言特性，非常适合于快速开发应用。于是乎，我们便有了服务端渲染。</p>
+<h3 id="模式：模板渲染"><a href="#模式：模板渲染" class="headerlink" title="模式：模板渲染"></a>模式：模板渲染</h3><p>在早期，前端开发人员使用的是数据、代码与模板分离的设计，诸如在 Java 里使用 Mustache 来进行服务端渲染。</p>
+<p>而随着前端技术的发展，代码和模板往往糅合在一起。</p>
+<h3 id="模式：异构渲染"><a href="#模式：异构渲染" class="headerlink" title="模式：异构渲染"></a>模式：异构渲染</h3><h4 id="Node-js-打造后端服务"><a href="#Node-js-打造后端服务" class="headerlink" title="Node.js 打造后端服务"></a>Node.js 打造后端服务</h4><p>从社区的探索来看，存在一些完全使用 Node.js 开发的后台服务。但是，也存在一系列由于代码不规范造成的问题。从社区的经验来看，Node.js + Express + MongoDB + Angular/Vue/React，便是一些不错的选择。当然了，也有相当多的应用，只是采用了 Node.js 来完成 BFF 层（Backend For Frontends）。在这一层业务上，它只做业务数据的中间处理。</p>
+<p>一些关键的节点上，尽量不要采用 Node.js 来打造后台服务。除了涉及到 SPA 的服务端渲染，不得不使用 Express、Koa 等这样的服务端 JavaScript/TypeScript 框架，来解决这样的问题。</p>
+<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><p>Express<br>Koa<br>Egg.js<br>NestJS<br>Hapi.js<br>Sails.js</p>
+<h3 id="是否大规模采用？"><a href="#是否大规模采用？" class="headerlink" title="是否大规模采用？"></a>是否大规模采用？</h3><p>国内最大规模使用 Node.js 开发后端服务的团队是阿里巴巴：</p>
+<p>Node 的 Collaborator 有 5 个国人, 其中 4 个在阿里巴巴这边，并且有国内唯一一个 CTC 成员。</p>
+<h2 id="6-FaaS-amp-Serverless"><a href="#6-FaaS-amp-Serverless" class="headerlink" title="6. FaaS &amp; Serverless"></a>6. FaaS &amp; Serverless</h2><blockquote>
+<p>Serverless 架构是指大量依赖第三方服务（也叫做后端即服务，即“BaaS”）或暂存容器中运行的自定义代码（函数即服务，即“FaaS”）的应用程序，函数是无服务器架构中抽象语言运行时的最小单位。在这种架构中，并不看重运行一个函数需要多少 CPU 或 RAM 或任何其他资源，而是更看重运行函数所需的时间，只为这些函数的运行时间付费。</p>
+</blockquote>
+<p>对于没有后台经验的前端开发人员来说，使用 Node.js 开发后端应用是一种相当大的挑战。大多数非科班的前端程序员，不知道从数据库到 RESTful API 的一系列操作，并且还需要了解到部署等一系列的系统底层知识。因此，使用 Serverless 这种不关心基础设施的技术，可以进一步地降低开发成本。</p>
+<p>采用 Serverless 架构，也就意味着，我们提取出了大量的基础设施。而使用 Node.js + JavaScript 作为胶水，来快速连接不同的服务，以形成一个快速有效的方案。并且，编写更少的代码，也意味着更安全、快速。</p>
+<p>使用 AWS 来运行大量的 Serverless 计算的成本很高，但是自己搭建一个 Serverless 服务器，来运行自己的 Serverless 应用，则变成了一种更廉价的方式。除了直接基于 AWS 的 Serverless Framework 框架的方案，还有 OpenFaaS、Kubeless、OpenWhisk、Fission 等不同的 Serverless 框架。</p>
+<h2 id="7-API-Gateway-amp-BFF"><a href="#7-API-Gateway-amp-BFF" class="headerlink" title="7. API Gateway &amp; BFF"></a>7. API Gateway &amp; BFF</h2><h3 id="BFF"><a href="#BFF" class="headerlink" title="BFF"></a>BFF</h3><p>BFF，即 Backends For Frontends (服务于前端的后端)，也就是服务器设计 API 时会考虑客户端的使用情况，在服务端根据不同的设备类型，返回不同客户端所需要的结果。BFF 模式，这种模式不会为所有的客户端创建通用的 API。而是创建多个 BFF 服务：一个用于 Web 前端、一个用于移动客户端（甚至一个用于 iOS，另一个用于 Android）等等。</p>
+<h2 id="8-大前端：IoT"><a href="#8-大前端：IoT" class="headerlink" title="8. 大前端：IoT"></a>8. 大前端：IoT</h2><p>Web 应用的架构相比于一个物联网系统，无非就是多了一层硬件层以及可选的协调层。</p>
+<h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><h2 id="10"><a href="#10" class="headerlink" title="10."></a>10.</h2><h2 id="11"><a href="#11" class="headerlink" title="11."></a>11.</h2><h2 id="12"><a href="#12" class="headerlink" title="12."></a>12.</h2>]]></content>
       <categories>
-        <category>设计模式</category>
-        <category>工厂模式</category>
+        <category>大前端</category>
       </categories>
       <tags>
-        <tag>设计模式</tag>
-        <tag>工厂模式</tag>
+        <tag>大前端</tag>
       </tags>
   </entry>
   <entry>
@@ -231,6 +329,42 @@
       </tags>
   </entry>
   <entry>
+    <title>数据结构与算法-2</title>
+    <url>/2021/07/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-2/</url>
+    <content><![CDATA[<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>每次选择基准值<br>根据基准值进行排序<br>最糟糕情况需要遍历全部</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>速度快，时间不会超过n^2</p>
+<h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><p>O(nlogn)<br><img src="https://z3.ax1x.com/2021/07/26/WRbFRx.png" alt="WRIgje.png"></p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>系统自带的排序为快排</p>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么?"></a>是什么?</h2><ul>
+<li>跳出条件</li>
+<li>执行逻辑</li>
+<li>找到下一个元素，调用自己，知道找到元素或跳出。</li>
+</ul>
+<h1 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h1><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><ol>
+<li>找出基线条件，找出可抽象最基本处理规则。</li>
+<li>可以通过反复进行在上述规则处理从而得出最终结果。</li>
+</ol>
+<h1 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h1><h2 id="是什么？-1"><a href="#是什么？-1" class="headerlink" title="是什么？"></a>是什么？</h2><p>是一个按照某个分类平均分布的链表结构。</p>
+<h2 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h2><p>对节点的操作复杂度低。</p>
+<h1 id="广度优先算法"><a href="#广度优先算法" class="headerlink" title="广度优先算法"></a>广度优先算法</h1><h2 id="egg"><a href="#egg" class="headerlink" title="egg"></a>egg</h2><h3 id="找到途径车站最少的路径"><a href="#找到途径车站最少的路径" class="headerlink" title="找到途径车站最少的路径"></a>找到途径车站最少的路径</h3><ol>
+<li>找到只经过一个站点能到达的地方</li>
+<li>判断一个站点所能达到的地方是否包含重点，否则继续找两个站点能到达的地方<br>直到n个站点所能到达的地方包括终点。</li>
+</ol>
+<h1 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h1><p class="todo">名字不记得了，回去补充</p>
+
+<h3 id="找到途径时间最少的路径"><a href="#找到途径时间最少的路径" class="headerlink" title="找到途径时间最少的路径"></a>找到途径时间最少的路径</h3><blockquote>
+<p>每个边有权重，这个例子的权重就是两站之间所花费的时间</p>
+</blockquote>
+<p>记录每个站点的权重，然后找出时间花费最少的接着计算由他分散出去的各个节点的时间。</p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构与算法-1</title>
     <url>/2021/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-1/</url>
     <content><![CDATA[<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><ol>
@@ -280,34 +414,30 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法-2</title>
-    <url>/2021/07/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-2/</url>
-    <content><![CDATA[<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>每次选择基准值<br>根据基准值进行排序<br>最糟糕情况需要遍历全部</p>
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>速度快，时间不会超过n^2</p>
-<h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><p>O(nlogn)<br><img src="https://z3.ax1x.com/2021/07/26/WRbFRx.png" alt="WRIgje.png"></p>
-<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>系统自带的排序为快排</p>
-<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么?"></a>是什么?</h2><ul>
-<li>跳出条件</li>
-<li>执行逻辑</li>
-<li>找到下一个元素，调用自己，知道找到元素或跳出。</li>
+    <title>数据结构与算法-概览</title>
+    <url>/2021/06/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%A6%82%E8%A7%88/</url>
+    <content><![CDATA[<h1 id="解决问题思路"><a href="#解决问题思路" class="headerlink" title="解决问题思路"></a>解决问题思路</h1><p>解决思路</p>
+<p><img style="width: 40%" src="https://z3.ax1x.com/2021/07/06/R7Dejf.png"></img></p>
+<h1 id="学习图谱"><a href="#学习图谱" class="headerlink" title="学习图谱"></a>学习图谱</h1><blockquote class="pullquote mindmap mindmap-md"><ul>
+<li>学习图谱<ul>
+<li>基础<ul>
+<li>基本数据结构</li>
+<li>大O(如何看复杂度)</li>
 </ul>
-<h1 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h1><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><ol>
-<li>找出基线条件，找出可抽象最基本处理规则。</li>
-<li>可以通过反复进行在上述规则处理从而得出最终结果。</li>
-</ol>
-<h1 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h1><h2 id="是什么？-1"><a href="#是什么？-1" class="headerlink" title="是什么？"></a>是什么？</h2><p>是一个按照某个分类平均分布的链表结构。</p>
-<h2 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h2><p>对节点的操作复杂度低。</p>
-<h1 id="广度优先算法"><a href="#广度优先算法" class="headerlink" title="广度优先算法"></a>广度优先算法</h1><h2 id="egg"><a href="#egg" class="headerlink" title="egg"></a>egg</h2><h3 id="找到途径车站最少的路径"><a href="#找到途径车站最少的路径" class="headerlink" title="找到途径车站最少的路径"></a>找到途径车站最少的路径</h3><ol>
-<li>找到只经过一个站点能到达的地方</li>
-<li>判断一个站点所能达到的地方是否包含重点，否则继续找两个站点能到达的地方<br>直到n个站点所能到达的地方包括终点。</li>
-</ol>
-<h1 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h1><p class="todo">名字不记得了，回去补充</p>
-
-<h3 id="找到途径时间最少的路径"><a href="#找到途径时间最少的路径" class="headerlink" title="找到途径时间最少的路径"></a>找到途径时间最少的路径</h3><blockquote>
-<p>每个边有权重，这个例子的权重就是两站之间所花费的时间</p>
-</blockquote>
-<p>记录每个站点的权重，然后找出时间花费最少的接着计算由他分散出去的各个节点的时间。</p>
-]]></content>
+</li>
+<li>解决问题<ul>
+<li>散列表</li>
+<li>图</li>
+<li>分治</li>
+<li>动态规划</li>
+<li>贪心</li>
+</ul>
+</li>
+<li>进一步学习其他10种算法</li>
+</ul>
+</li>
+</ul>
+</blockquote>]]></content>
       <categories>
         <category>数据结构与算法</category>
       </categories>
@@ -346,30 +476,6 @@
       </categories>
       <tags>
         <tag>数据结构与算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人问题总结</title>
-    <url>/2021/06/09/%E4%B8%AA%E4%BA%BA%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>急躁，遇事先思考。</p>
-<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><input type="checkbox" value="check1" id="check1">
-<label for="check1" class="mark">1. 专注呼吸，调整心态。</label >
-<input type="checkbox" value="check2" id="check2">
-<label for="check2" class="mark">2. 思考着急是为了什么？是否重要？为什么要给自己压力？</label >
-<input type="checkbox" value="check3" id="check3">
-<label for="check3" class="mark">3. 做什么事情尽量慢一个步调，想象自己是一个慢悠悠的性子。</label >
-<input type="checkbox" value="check4" id="check4">
-<label for="check4" class="mark">4. 可以适当的辅助一些运动。</label >
-<input type="checkbox" value="check5" id="check5">
-<label for="check5" class="mark">5. 每当做出决定前先考虑是否可以这么做？这么做的好处是什么？这么做是否有意义？</label >
-]]></content>
-      <categories>
-        <category>个人提升</category>
-        <category>每日打卡</category>
-      </categories>
-      <tags>
-        <tag>个人提升</tag>
-        <tag>每日打卡</tag>
       </tags>
   </entry>
   <entry>
@@ -424,38 +530,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法-概览</title>
-    <url>/2021/06/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%A6%82%E8%A7%88/</url>
-    <content><![CDATA[<h1 id="解决问题思路"><a href="#解决问题思路" class="headerlink" title="解决问题思路"></a>解决问题思路</h1><p>解决思路</p>
-<p><img style="width: 40%" src="https://z3.ax1x.com/2021/07/06/R7Dejf.png"></img></p>
-<h1 id="学习图谱"><a href="#学习图谱" class="headerlink" title="学习图谱"></a>学习图谱</h1><blockquote class="pullquote mindmap mindmap-md"><ul>
-<li>学习图谱<ul>
-<li>基础<ul>
-<li>基本数据结构</li>
-<li>大O(如何看复杂度)</li>
-</ul>
-</li>
-<li>解决问题<ul>
-<li>散列表</li>
-<li>图</li>
-<li>分治</li>
-<li>动态规划</li>
-<li>贪心</li>
-</ul>
-</li>
-<li>进一步学习其他10种算法</li>
-</ul>
-</li>
-</ul>
-</blockquote>]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网络学习笔记</title>
     <url>/2021/06/07/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="1-数据是如何传输的"><a href="#1-数据是如何传输的" class="headerlink" title="1. 数据是如何传输的"></a>1. 数据是如何传输的</h1><h2 id="1-网络传输过程"><a href="#1-网络传输过程" class="headerlink" title="1. 网络传输过程"></a>1. 网络传输过程</h2><ol>
@@ -474,6 +548,43 @@
       </categories>
       <tags>
         <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机系统-概述</title>
+    <url>/2021/07/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F-%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="计算机由硬件-amp-系统软件组成"><a href="#计算机由硬件-amp-系统软件组成" class="headerlink" title="计算机由硬件&amp;系统软件组成"></a>计算机由硬件&amp;系统软件组成</h1><ul>
+<li>系统中所有信息-包括磁盘文件、存储器中的程序、存储器中存放的用户数据以及网络上传送的数据都是由一串位表示的。</li>
+</ul>
+<h1 id="程序翻译执行过程"><a href="#程序翻译执行过程" class="headerlink" title="程序翻译执行过程"></a>程序翻译执行过程</h1><p>ASCII文本 -&gt; 二进制可执行文件（编辑器、链接器翻译） </p>
+<p><img src="https://z3.ax1x.com/2021/07/22/WBznyQ.png" alt="WBxwPf.png"></p>
+<h2 id="计算机运行程序时的图解"><a href="#计算机运行程序时的图解" class="headerlink" title="计算机运行程序时的图解"></a>计算机运行程序时的图解</h2><h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><h2 id="并行"><a href="#并行" class="headerlink" title="并行"></a>并行</h2><h1 id="操作系统内核是应用程序和硬件之间的媒介"><a href="#操作系统内核是应用程序和硬件之间的媒介" class="headerlink" title="操作系统内核是应用程序和硬件之间的媒介"></a>操作系统内核是应用程序和硬件之间的媒介</h1><ol>
+<li>文件是对 I/O设备的抽象</li>
+<li>虚拟存储器是对主存的和磁盘的抽象</li>
+<li>进程是对处理器、主存和I/O设备的抽象</li>
+</ol>
+]]></content>
+      <categories>
+        <category>计算机系统</category>
+      </categories>
+      <tags>
+        <tag>计算机系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式-工厂模式</title>
+    <url>/2021/08/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="工厂模式是什么"><a href="#工厂模式是什么" class="headerlink" title="工厂模式是什么?"></a>工厂模式是什么?</h1><p>我的理解是：封装最基本的单元</p>
+<p>比如有一个工具箱，我们可以把工具箱里的每个工具封装成一个类，在使用某个工具是实例化这个工具。<br><img src="https://z3.ax1x.com/2021/08/02/fpC5qO.png" alt="fpC5qO.png"><br>这个工具可以手工的diy，也就是具备老旧工具功能的新工具。</p>
+<h1 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h1><p>可以方便的那这些零件去拼凑出自己想要的工具，增加代码可复用。</p>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p class="todo">有想法再补充</p>]]></content>
+      <categories>
+        <category>设计模式</category>
+        <category>工厂模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+        <tag>工厂模式</tag>
       </tags>
   </entry>
   <entry>
@@ -506,117 +617,6 @@
       <tags>
         <tag>设计模式</tag>
         <tag>策略模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机系统-概述</title>
-    <url>/2021/07/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F-%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h1 id="计算机由硬件-amp-系统软件组成"><a href="#计算机由硬件-amp-系统软件组成" class="headerlink" title="计算机由硬件&amp;系统软件组成"></a>计算机由硬件&amp;系统软件组成</h1><ul>
-<li>系统中所有信息-包括磁盘文件、存储器中的程序、存储器中存放的用户数据以及网络上传送的数据都是由一串位表示的。</li>
-</ul>
-<h1 id="程序翻译执行过程"><a href="#程序翻译执行过程" class="headerlink" title="程序翻译执行过程"></a>程序翻译执行过程</h1><p>ASCII文本 -&gt; 二进制可执行文件（编辑器、链接器翻译） </p>
-<p><img src="https://z3.ax1x.com/2021/07/22/WBznyQ.png" alt="WBxwPf.png"></p>
-<h2 id="计算机运行程序时的图解"><a href="#计算机运行程序时的图解" class="headerlink" title="计算机运行程序时的图解"></a>计算机运行程序时的图解</h2><h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><h2 id="并行"><a href="#并行" class="headerlink" title="并行"></a>并行</h2><h1 id="操作系统内核是应用程序和硬件之间的媒介"><a href="#操作系统内核是应用程序和硬件之间的媒介" class="headerlink" title="操作系统内核是应用程序和硬件之间的媒介"></a>操作系统内核是应用程序和硬件之间的媒介</h1><ol>
-<li>文件是对 I/O设备的抽象</li>
-<li>虚拟存储器是对主存的和磁盘的抽象</li>
-<li>进程是对处理器、主存和I/O设备的抽象</li>
-</ol>
-]]></content>
-      <categories>
-        <category>计算机系统</category>
-      </categories>
-      <tags>
-        <tag>计算机系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大前端-个人提升角度分析</title>
-    <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h2 id="1-前端所占比重"><a href="#1-前端所占比重" class="headerlink" title="1. 前端所占比重"></a>1. 前端所占比重</h2><p>比重：往往懂前端的而后端且先到更容易有较高地位。</p>
-<p> to c 前后端都无地位。</p>
-<p>引出观点：无论前后端，都需要具备全站的知识涵盖范围。</p>
-<h2 id="2-团队规模决定前端"><a href="#2-团队规模决定前端" class="headerlink" title="2. 团队规模决定前端"></a>2. 团队规模决定前端</h2><p>决定因素：&gt; 业务体量  &gt; 团队规模</p>
-<h2 id="3-流水线式开发"><a href="#3-流水线式开发" class="headerlink" title="3. 流水线式开发"></a>3. 流水线式开发</h2><p>大型组织，需要更明确的分工，以便于机械工的生产更多的应用。</p>
-<p>也因此需要更明确的分工，来解决效率的问题。</p>
-<p>工具支撑团队<br>框架开发团队<br>业务开发团队<br>DevOps 团队</p>
-<h2 id="4-客户端多样式"><a href="#4-客户端多样式" class="headerlink" title="4. 客户端多样式"></a>4. 客户端多样式</h2><p>客户端开发的需求：微信小程度、桌面客户端、跨平台应用等等。</p>
-<h2 id="5-新的领域"><a href="#5-新的领域" class="headerlink" title="5. 新的领域"></a>5. 新的领域</h2><p>新的领域，存在更多机会。</p>
-<p>边缘计算<br>区块链<br>客户端计算<br>……</p>
-<h2 id="6-业务熟悉度"><a href="#6-业务熟悉度" class="headerlink" title="6. 业务熟悉度"></a>6. 业务熟悉度</h2><p>业务不熟悉无法带领团队。</p>
-]]></content>
-      <categories>
-        <category>大前端</category>
-      </categories>
-      <tags>
-        <tag>大前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大前端-是什么？</title>
-    <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E6%98%AF%E4%BB%80%E4%B9%88/</url>
-    <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><p>是什么：通过Web 开发相关的技术（WebView、JavaScript/TypeScript）所能开发、处理的领域。</p>
-<p>涵盖领域：后端（Node.js 如 BFF 层、Serverless）、HTML 5 游戏、物联网、嵌入式应用、移动应用、桌面应用。</p>
-<p>特点：一次开发，多种平台</p>
-<h2 id="2-为什么是大前端，不是大后端呢？"><a href="#2-为什么是大前端，不是大后端呢？" class="headerlink" title="2. 为什么是大前端，不是大后端呢？"></a>2. 为什么是大前端，不是大后端呢？</h2><ol>
-<li><p>前端，即面向用户交互，存在一系列的方式。</p>
-</li>
-<li><p>前端在变窄</p>
-</li>
-<li><p>JavaScript 易学、广泛使用、熟悉的语法</p>
-</li>
-<li><p>无处不在的 WebView</p>
-</li>
-</ol>
-<blockquote>
-<p>值得注意的是：对于某些领域而言，大前端技术并不是最好的技术，但是它是实现起来最快的技术，也因此特别适合于 MVP 原型构建。与此同时，前端技术的动态特性，特别适合于远程更新业务——只需要更新对应的代码，而不需要更新整个应用。</p>
-</blockquote>
-<h2 id="3-大前端的技术领域"><a href="#3-大前端的技术领域" class="headerlink" title="3. 大前端的技术领域"></a>3. 大前端的技术领域</h2><ol>
-<li> Web 前端</li>
-<li> GUI</li>
-<li> 游戏</li>
-<li> 物联网</li>
-<li> 移动端</li>
-<li> AR/VR</li>
-</ol>
-<h2 id="4-如何成为大前端？"><a href="#4-如何成为大前端？" class="headerlink" title="4. 如何成为大前端？"></a>4. 如何成为大前端？</h2><p>所谓的前端 in 后端，便是在后端开发中，使用前端相关的语言和技术栈。最典型的场景，便是使用 Node.js 开发后端服务。</p>
-<h2 id="5-服务端渲染"><a href="#5-服务端渲染" class="headerlink" title="5. 服务端渲染"></a>5. 服务端渲染</h2><p>JavaScript，它的动态语言特性，非常适合于快速开发应用。于是乎，我们便有了服务端渲染。</p>
-<h3 id="模式：模板渲染"><a href="#模式：模板渲染" class="headerlink" title="模式：模板渲染"></a>模式：模板渲染</h3><p>在早期，前端开发人员使用的是数据、代码与模板分离的设计，诸如在 Java 里使用 Mustache 来进行服务端渲染。</p>
-<p>而随着前端技术的发展，代码和模板往往糅合在一起。</p>
-<h3 id="模式：异构渲染"><a href="#模式：异构渲染" class="headerlink" title="模式：异构渲染"></a>模式：异构渲染</h3><h4 id="Node-js-打造后端服务"><a href="#Node-js-打造后端服务" class="headerlink" title="Node.js 打造后端服务"></a>Node.js 打造后端服务</h4><p>从社区的探索来看，存在一些完全使用 Node.js 开发的后台服务。但是，也存在一系列由于代码不规范造成的问题。从社区的经验来看，Node.js + Express + MongoDB + Angular/Vue/React，便是一些不错的选择。当然了，也有相当多的应用，只是采用了 Node.js 来完成 BFF 层（Backend For Frontends）。在这一层业务上，它只做业务数据的中间处理。</p>
-<p>一些关键的节点上，尽量不要采用 Node.js 来打造后台服务。除了涉及到 SPA 的服务端渲染，不得不使用 Express、Koa 等这样的服务端 JavaScript/TypeScript 框架，来解决这样的问题。</p>
-<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><p>Express<br>Koa<br>Egg.js<br>NestJS<br>Hapi.js<br>Sails.js</p>
-<h3 id="是否大规模采用？"><a href="#是否大规模采用？" class="headerlink" title="是否大规模采用？"></a>是否大规模采用？</h3><p>国内最大规模使用 Node.js 开发后端服务的团队是阿里巴巴：</p>
-<p>Node 的 Collaborator 有 5 个国人, 其中 4 个在阿里巴巴这边，并且有国内唯一一个 CTC 成员。</p>
-<h2 id="6-FaaS-amp-Serverless"><a href="#6-FaaS-amp-Serverless" class="headerlink" title="6. FaaS &amp; Serverless"></a>6. FaaS &amp; Serverless</h2><blockquote>
-<p>Serverless 架构是指大量依赖第三方服务（也叫做后端即服务，即“BaaS”）或暂存容器中运行的自定义代码（函数即服务，即“FaaS”）的应用程序，函数是无服务器架构中抽象语言运行时的最小单位。在这种架构中，并不看重运行一个函数需要多少 CPU 或 RAM 或任何其他资源，而是更看重运行函数所需的时间，只为这些函数的运行时间付费。</p>
-</blockquote>
-<p>对于没有后台经验的前端开发人员来说，使用 Node.js 开发后端应用是一种相当大的挑战。大多数非科班的前端程序员，不知道从数据库到 RESTful API 的一系列操作，并且还需要了解到部署等一系列的系统底层知识。因此，使用 Serverless 这种不关心基础设施的技术，可以进一步地降低开发成本。</p>
-<p>采用 Serverless 架构，也就意味着，我们提取出了大量的基础设施。而使用 Node.js + JavaScript 作为胶水，来快速连接不同的服务，以形成一个快速有效的方案。并且，编写更少的代码，也意味着更安全、快速。</p>
-<p>使用 AWS 来运行大量的 Serverless 计算的成本很高，但是自己搭建一个 Serverless 服务器，来运行自己的 Serverless 应用，则变成了一种更廉价的方式。除了直接基于 AWS 的 Serverless Framework 框架的方案，还有 OpenFaaS、Kubeless、OpenWhisk、Fission 等不同的 Serverless 框架。</p>
-<h2 id="7-API-Gateway-amp-BFF"><a href="#7-API-Gateway-amp-BFF" class="headerlink" title="7. API Gateway &amp; BFF"></a>7. API Gateway &amp; BFF</h2><h3 id="BFF"><a href="#BFF" class="headerlink" title="BFF"></a>BFF</h3><p>BFF，即 Backends For Frontends (服务于前端的后端)，也就是服务器设计 API 时会考虑客户端的使用情况，在服务端根据不同的设备类型，返回不同客户端所需要的结果。BFF 模式，这种模式不会为所有的客户端创建通用的 API。而是创建多个 BFF 服务：一个用于 Web 前端、一个用于移动客户端（甚至一个用于 iOS，另一个用于 Android）等等。</p>
-<h2 id="8-大前端：IoT"><a href="#8-大前端：IoT" class="headerlink" title="8. 大前端：IoT"></a>8. 大前端：IoT</h2><p>Web 应用的架构相比于一个物联网系统，无非就是多了一层硬件层以及可选的协调层。</p>
-<h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><h2 id="10"><a href="#10" class="headerlink" title="10."></a>10.</h2><h2 id="11"><a href="#11" class="headerlink" title="11."></a>11.</h2><h2 id="12"><a href="#12" class="headerlink" title="12."></a>12.</h2>]]></content>
-      <categories>
-        <category>大前端</category>
-      </categories>
-      <tags>
-        <tag>大前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计模式-工厂模式</title>
-    <url>/2021/08/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="工厂模式是什么"><a href="#工厂模式是什么" class="headerlink" title="工厂模式是什么?"></a>工厂模式是什么?</h1><p>我的理解是：封装最基本的单元</p>
-<p>比如有一个工具箱，我们可以把工具箱里的每个工具封装成一个类，在使用某个工具是实例化这个工具。<br><img src="https://z3.ax1x.com/2021/08/02/fpC5qO.png" alt="fpC5qO.png"><br>这个工具可以手工的diy，也就是具备老旧工具功能的新工具。</p>
-<h1 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h1><p>可以方便的那这些零件去拼凑出自己想要的工具，增加代码可复用。</p>
-<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p class="todo">有想法再补充</p>]]></content>
-      <categories>
-        <category>设计模式</category>
-        <category>工厂模式</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-        <tag>工厂模式</tag>
       </tags>
   </entry>
   <entry>
