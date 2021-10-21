@@ -44,17 +44,6 @@
       </tags>
   </entry>
   <entry>
-    <title>umi-简介</title>
-    <url>/2021/05/28/umi-%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>umi</category>
-      </categories>
-      <tags>
-        <tag>umi</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>nvm-node管理机制</title>
     <url>/2021/07/08/nvm-node%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/</url>
     <content><![CDATA[<h1 id="nvm是如何管理你的node版本的？"><a href="#nvm是如何管理你的node版本的？" class="headerlink" title="nvm是如何管理你的node版本的？"></a>nvm是如何管理你的node版本的？</h1><p>在你切换时他会在c盘下生成一个快捷方式，这个快捷方式会指向你当前版本的包的地址。然后系统这边的Node相关配置永远都指向这个c盘的这个生成的快捷方式即可。</p>
@@ -67,6 +56,41 @@
       </categories>
       <tags>
         <tag>nvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>umi-简介</title>
+    <url>/2021/05/28/umi-%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>umi</category>
+      </categories>
+      <tags>
+        <tag>umi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人问题总结</title>
+    <url>/2021/06/09/%E4%B8%AA%E4%BA%BA%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>急躁，遇事先思考。</p>
+<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><input type="checkbox" value="check1" id="check1">
+<label for="check1" class="mark">1. 专注呼吸，调整心态。</label >
+<input type="checkbox" value="check2" id="check2">
+<label for="check2" class="mark">2. 思考着急是为了什么？是否重要？为什么要给自己压力？</label >
+<input type="checkbox" value="check3" id="check3">
+<label for="check3" class="mark">3. 做什么事情尽量慢一个步调，想象自己是一个慢悠悠的性子。</label >
+<input type="checkbox" value="check4" id="check4">
+<label for="check4" class="mark">4. 可以适当的辅助一些运动。</label >
+<input type="checkbox" value="check5" id="check5">
+<label for="check5" class="mark">5. 每当做出决定前先考虑是否可以这么做？这么做的好处是什么？这么做是否有意义？</label >
+]]></content>
+      <categories>
+        <category>个人提升</category>
+        <category>每日打卡</category>
+      </categories>
+      <tags>
+        <tag>个人提升</tag>
+        <tag>每日打卡</tag>
       </tags>
   </entry>
   <entry>
@@ -108,30 +132,6 @@
       </categories>
       <tags>
         <tag>Java Script</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人问题总结</title>
-    <url>/2021/06/09/%E4%B8%AA%E4%BA%BA%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>急躁，遇事先思考。</p>
-<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><input type="checkbox" value="check1" id="check1">
-<label for="check1" class="mark">1. 专注呼吸，调整心态。</label >
-<input type="checkbox" value="check2" id="check2">
-<label for="check2" class="mark">2. 思考着急是为了什么？是否重要？为什么要给自己压力？</label >
-<input type="checkbox" value="check3" id="check3">
-<label for="check3" class="mark">3. 做什么事情尽量慢一个步调，想象自己是一个慢悠悠的性子。</label >
-<input type="checkbox" value="check4" id="check4">
-<label for="check4" class="mark">4. 可以适当的辅助一些运动。</label >
-<input type="checkbox" value="check5" id="check5">
-<label for="check5" class="mark">5. 每当做出决定前先考虑是否可以这么做？这么做的好处是什么？这么做是否有意义？</label >
-]]></content>
-      <categories>
-        <category>个人提升</category>
-        <category>每日打卡</category>
-      </categories>
-      <tags>
-        <tag>个人提升</tag>
-        <tag>每日打卡</tag>
       </tags>
   </entry>
   <entry>
@@ -378,22 +378,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法-想法记录</title>
-    <url>/2021/07/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%83%B3%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="关于查找的想法"><a href="#关于查找的想法" class="headerlink" title="关于查找的想法"></a>关于查找的想法</h1><h2 id="想法-散列表是二维的二分法"><a href="#想法-散列表是二维的二分法" class="headerlink" title="想法-散列表是二维的二分法"></a>想法-散列表是二维的二分法</h2><h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><p>排序、通过二分法查找</p>
-<h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><p>将树洗成左子树的权重始终比右子树大的这种排列方式，然后从中间开始找。树结构的二分法。</p>
-<h3 id="扩展（纯属自己没事瞎想）"><a href="#扩展（纯属自己没事瞎想）" class="headerlink" title="扩展（纯属自己没事瞎想）"></a>扩展（纯属自己没事瞎想）</h3><ul>
-<li>如果有一个二维数组，第一个维度按照权重大小排序生成一个映射关系m1，在根据第二个维度的权重大小生成一个映射关系m2，然后查找m1维度权重为m(n)，m2维度权重为m(o)为的元素,也就是m1(n)m2(o)，通过两个分发去查找。适合多维度数据的查找与操作。不适合精确查找，除非这个元素已知，或者范围查询。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构与算法-2</title>
     <url>/2021/07/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-2/</url>
     <content><![CDATA[<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>每次选择基准值<br>根据基准值进行排序<br>最糟糕情况需要遍历全部</p>
@@ -438,6 +422,22 @@
 <li>时间快</li>
 </ul>
 <h2 id="NP问题"><a href="#NP问题" class="headerlink" title="NP问题"></a>NP问题</h2><p>在众多要求中，优先选择核心的条件，是一个取舍问题。</p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法-想法记录</title>
+    <url>/2021/07/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%83%B3%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="关于查找的想法"><a href="#关于查找的想法" class="headerlink" title="关于查找的想法"></a>关于查找的想法</h1><h2 id="想法-散列表是二维的二分法"><a href="#想法-散列表是二维的二分法" class="headerlink" title="想法-散列表是二维的二分法"></a>想法-散列表是二维的二分法</h2><h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><p>排序、通过二分法查找</p>
+<h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><p>将树洗成左子树的权重始终比右子树大的这种排列方式，然后从中间开始找。树结构的二分法。</p>
+<h3 id="扩展（纯属自己没事瞎想）"><a href="#扩展（纯属自己没事瞎想）" class="headerlink" title="扩展（纯属自己没事瞎想）"></a>扩展（纯属自己没事瞎想）</h3><ul>
+<li>如果有一个二维数组，第一个维度按照权重大小排序生成一个映射关系m1，在根据第二个维度的权重大小生成一个映射关系m2，然后查找m1维度权重为m(n)，m2维度权重为m(o)为的元素,也就是m1(n)m2(o)，通过两个分发去查找。适合多维度数据的查找与操作。不适合精确查找，除非这个元素已知，或者范围查询。</li>
+</ul>
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
@@ -505,27 +505,6 @@
       </tags>
   </entry>
   <entry>
-    <title>网络学习笔记</title>
-    <url>/2021/06/07/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="1-数据是如何传输的"><a href="#1-数据是如何传输的" class="headerlink" title="1. 数据是如何传输的"></a>1. 数据是如何传输的</h1><h2 id="1-网络传输过程"><a href="#1-网络传输过程" class="headerlink" title="1. 网络传输过程"></a>1. 网络传输过程</h2><ol>
-<li>应用层<br>传递消息</li>
-<li>表示层<br>解密、编码等</li>
-<li>会话层<br>维持会话</li>
-<li>传输层<br>端对端的链接</li>
-<li>网络层<br>网络层收到传输层来的数据，加入路由信息，地址信息等，形成“包”。这些包就会在网络中传播（中间可能跳转多个路由器），到达对方的网络</li>
-<li>数据链路层<br>上层协议转换成lan地址，把消息换成“位”，主要进行<div class="text_need_explain">ARP<div class="text_explain">地址解析协议</div></div>等协议，加入本网中表示你PC的字段</li>
-<li>物理层<br>按照位在你网线中发送高低电压的信号</li>
-</ol>
-<blockquote class="pullquote mindmap mindmap-md"></blockquote>
-]]></content>
-      <categories>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>浏览器获取资源</title>
     <url>/2021/07/08/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90/</url>
     <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>最近开发的项目中有个奇怪的现象。<br>每次更新镜像，获取资源时如果在未获取完时刷新就会导致资源长时间获取被截断。（对资源大的有有明显影响）</p>
@@ -547,6 +526,27 @@
       </categories>
       <tags>
         <tag>浏览器</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络学习笔记</title>
+    <url>/2021/06/07/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="1-数据是如何传输的"><a href="#1-数据是如何传输的" class="headerlink" title="1. 数据是如何传输的"></a>1. 数据是如何传输的</h1><h2 id="1-网络传输过程"><a href="#1-网络传输过程" class="headerlink" title="1. 网络传输过程"></a>1. 网络传输过程</h2><ol>
+<li>应用层<br>传递消息</li>
+<li>表示层<br>解密、编码等</li>
+<li>会话层<br>维持会话</li>
+<li>传输层<br>端对端的链接</li>
+<li>网络层<br>网络层收到传输层来的数据，加入路由信息，地址信息等，形成“包”。这些包就会在网络中传播（中间可能跳转多个路由器），到达对方的网络</li>
+<li>数据链路层<br>上层协议转换成lan地址，把消息换成“位”，主要进行<div class="text_need_explain">ARP<div class="text_explain">地址解析协议</div></div>等协议，加入本网中表示你PC的字段</li>
+<li>物理层<br>按照位在你网线中发送高低电压的信号</li>
+</ol>
+<blockquote class="pullquote mindmap mindmap-md"></blockquote>
+]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
         <tag>网络</tag>
       </tags>
   </entry>
@@ -598,7 +598,18 @@
 <p>我认为比较合理的封装是将策略进行分类，日后如有具体的需求可以在原有分类上继承并添加具体策略的成员变量和方法。</p>
 </blockquote>
 <p><img src="https://z3.ax1x.com/2021/08/02/fpfzTg.png" alt="fpC5qO.png"></p>
-<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p class="todo">有想法再补充</p>]]></content>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p class="todo">有想法再补充</p>
+
+<h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><ol>
+<li>路由的实现</li>
+</ol>
+<ul>
+<li>react-router</li>
+<li>vue-router</li>
+<li>egg-router</li>
+<li>koa-router</li>
+</ul>
+]]></content>
       <categories>
         <category>设计模式</category>
         <category>策略模式</category>
