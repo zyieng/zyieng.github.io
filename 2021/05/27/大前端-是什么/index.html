@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+<title>大前端-是什么？-Zyieng</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/banana.ico">
+
+
+<meta name="keywords" content="大前端,">
+<meta name="description" content="">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+	<meta name="generator" content="Hexo 5.4.0"></head>
+
+	<body>
+		
+<link rel="stylesheet" href="/css/mindmap.css">
+
+
+<link rel="stylesheet" href="/css/page.css">
+
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/page_cente.css">
+
+
+<link rel="stylesheet" href="/css/atom-one-dark.css">
+
+
+<link rel="stylesheet" href="/css/header.css">
+
+	<div class="header">
+		<div class="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/image/logo.png" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										主页
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										文章
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										文章分类
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										标签
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										友情链接
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										关于
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar_wrap">
+    <div class="sidebar">
+        <div class="topo">
+        </div>
+        <ul>
+            <li>
+                <h2>
+                    Zyieng
+                </h2>
+            </li>
+            
+                <li>
+                    <a href="/">
+                        主页
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/archives">
+                        文章
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/categories">
+                        文章分类
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/tags">
+                        标签
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/links">
+                        友情链接
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/about">
+                        关于
+                    </a>
+                </li>
+                
+        </ul>
+        <div class="my_foot">
+            
+                <a target="_blank" rel="noopener" href="https://github.com/zyieng">
+                    <img src="https://z3.ax1x.com/2021/06/07/2wj9UJ.jpg" alt="Quiet主题">
+                </a>
+                
+        </div>
+    </div>
+    <div class='shelter'
+        style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'>
+    </div>
+</div>
+<style>
+    .sidebar_wrap {
+        position: absolute;
+    }
+
+    .sidebar {
+        width: 66%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -66%;
+        bottom: 0;
+        background: #fff;
+        z-index: 999;
+        text-align: center;
+        transition: ease-in-out .5s;
+    }
+    .sidebar.display {
+        right: 0;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(https://z3.ax1x.com/2021/07/20/WNRtcn.jpg) no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #333;
+    }
+
+    .topo:before {
+        content: '';
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 10px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $(function () { 
+        $('.h-right-close>svg').click(function () { 
+            $('.sidebar').addClass('display'); 
+            $('.shelter').fadeIn("slow") 
+        }); 
+        $('.shelter').click(function (e) { 
+            $('.sidebar').removeClass('display'); 
+            $('.shelter').fadeOut("slow") 
+        }) 
+    })
+</script>
+		<script>
+			$(function () { $(window).scroll(function () { if ($(document).scrollTop() > 100) { $(".header-top").removeClass("header-move2"); $('.header-top').addClass('header-move1') } else { $(".header-top").removeClass("header-move1"); $('.header-top').addClass('header-move2') } }) });
+		</script>
+<div class="header-bg ">
+    <div class="bg-content">
+        
+            <div class="title_img">
+                <img src="https://z3.ax1x.com/2021/07/08/ROHjC4.jpg" alt="Quiet">
+            </div>
+            
+                <ul class="tag">
+                    
+                        
+                            <li><a href="/tags/大前端">
+                                    大前端
+                                </a></li>
+                            
+                                
+                </ul>
+                <h1>
+                    大前端-是什么？
+                </h1>
+                <div class="article-info">
+                    <div class="article-author">
+                        
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                    <g>
+                                        <path fill="#12183A"
+                                            d="M6.187 15.265A6.47 6.47 0 0 0 10 16.5a6.47 6.47 0 0 0 3.813-1.235A4.99 4.99 0 0 0 10 13.5a4.99 4.99 0 0 0-3.813 1.765zM5.082 14.25A6.485 6.485 0 0 1 10 12c1.965 0 3.726.872 4.918 2.25a6.5 6.5 0 1 0-9.836 0zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                                        </path>
+                                    </g>
+                                </svg>
+                                
+                                    <span> <a href="">
+                                            Zyieng
+                                        </a></span>
+                                    <p>
+                                        2021-05-27 13:18:48
+                                    </p>
+                    </div>
+                </div>
+    </div>
+</div>
+<div class="article-content">
+    <div id="article" class="content">
+        <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><p>是什么：通过Web 开发相关的技术（WebView、JavaScript/TypeScript）所能开发、处理的领域。</p>
+<p>涵盖领域：后端（Node.js 如 BFF 层、Serverless）、HTML 5 游戏、物联网、嵌入式应用、移动应用、桌面应用。</p>
+<p>特点：一次开发，多种平台</p>
+<h2 id="2-为什么是大前端，不是大后端呢？"><a href="#2-为什么是大前端，不是大后端呢？" class="headerlink" title="2. 为什么是大前端，不是大后端呢？"></a>2. 为什么是大前端，不是大后端呢？</h2><ol>
+<li><p>前端，即面向用户交互，存在一系列的方式。</p>
+</li>
+<li><p>前端在变窄</p>
+</li>
+<li><p>JavaScript 易学、广泛使用、熟悉的语法</p>
+</li>
+<li><p>无处不在的 WebView</p>
+</li>
+</ol>
+<blockquote>
+<p>值得注意的是：对于某些领域而言，大前端技术并不是最好的技术，但是它是实现起来最快的技术，也因此特别适合于 MVP 原型构建。与此同时，前端技术的动态特性，特别适合于远程更新业务——只需要更新对应的代码，而不需要更新整个应用。</p>
+</blockquote>
+<h2 id="3-大前端的技术领域"><a href="#3-大前端的技术领域" class="headerlink" title="3. 大前端的技术领域"></a>3. 大前端的技术领域</h2><ol>
+<li> Web 前端</li>
+<li> GUI</li>
+<li> 游戏</li>
+<li> 物联网</li>
+<li> 移动端</li>
+<li> AR/VR</li>
+</ol>
+<h2 id="4-如何成为大前端？"><a href="#4-如何成为大前端？" class="headerlink" title="4. 如何成为大前端？"></a>4. 如何成为大前端？</h2><p>所谓的前端 in 后端，便是在后端开发中，使用前端相关的语言和技术栈。最典型的场景，便是使用 Node.js 开发后端服务。</p>
+<h2 id="5-服务端渲染"><a href="#5-服务端渲染" class="headerlink" title="5. 服务端渲染"></a>5. 服务端渲染</h2><p>JavaScript，它的动态语言特性，非常适合于快速开发应用。于是乎，我们便有了服务端渲染。</p>
+<h3 id="模式：模板渲染"><a href="#模式：模板渲染" class="headerlink" title="模式：模板渲染"></a>模式：模板渲染</h3><p>在早期，前端开发人员使用的是数据、代码与模板分离的设计，诸如在 Java 里使用 Mustache 来进行服务端渲染。</p>
+<p>而随着前端技术的发展，代码和模板往往糅合在一起。</p>
+<h3 id="模式：异构渲染"><a href="#模式：异构渲染" class="headerlink" title="模式：异构渲染"></a>模式：异构渲染</h3><h4 id="Node-js-打造后端服务"><a href="#Node-js-打造后端服务" class="headerlink" title="Node.js 打造后端服务"></a>Node.js 打造后端服务</h4><p>从社区的探索来看，存在一些完全使用 Node.js 开发的后台服务。但是，也存在一系列由于代码不规范造成的问题。从社区的经验来看，Node.js + Express + MongoDB + Angular/Vue/React，便是一些不错的选择。当然了，也有相当多的应用，只是采用了 Node.js 来完成 BFF 层（Backend For Frontends）。在这一层业务上，它只做业务数据的中间处理。</p>
+<p>一些关键的节点上，尽量不要采用 Node.js 来打造后台服务。除了涉及到 SPA 的服务端渲染，不得不使用 Express、Koa 等这样的服务端 JavaScript/TypeScript 框架，来解决这样的问题。</p>
+<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><p>Express<br>Koa<br>Egg.js<br>NestJS<br>Hapi.js<br>Sails.js</p>
+<h3 id="是否大规模采用？"><a href="#是否大规模采用？" class="headerlink" title="是否大规模采用？"></a>是否大规模采用？</h3><p>国内最大规模使用 Node.js 开发后端服务的团队是阿里巴巴：</p>
+<p>Node 的 Collaborator 有 5 个国人, 其中 4 个在阿里巴巴这边，并且有国内唯一一个 CTC 成员。</p>
+<h2 id="6-FaaS-amp-Serverless"><a href="#6-FaaS-amp-Serverless" class="headerlink" title="6. FaaS &amp; Serverless"></a>6. FaaS &amp; Serverless</h2><blockquote>
+<p>Serverless 架构是指大量依赖第三方服务（也叫做后端即服务，即“BaaS”）或暂存容器中运行的自定义代码（函数即服务，即“FaaS”）的应用程序，函数是无服务器架构中抽象语言运行时的最小单位。在这种架构中，并不看重运行一个函数需要多少 CPU 或 RAM 或任何其他资源，而是更看重运行函数所需的时间，只为这些函数的运行时间付费。</p>
+</blockquote>
+<p>对于没有后台经验的前端开发人员来说，使用 Node.js 开发后端应用是一种相当大的挑战。大多数非科班的前端程序员，不知道从数据库到 RESTful API 的一系列操作，并且还需要了解到部署等一系列的系统底层知识。因此，使用 Serverless 这种不关心基础设施的技术，可以进一步地降低开发成本。</p>
+<p>采用 Serverless 架构，也就意味着，我们提取出了大量的基础设施。而使用 Node.js + JavaScript 作为胶水，来快速连接不同的服务，以形成一个快速有效的方案。并且，编写更少的代码，也意味着更安全、快速。</p>
+<p>使用 AWS 来运行大量的 Serverless 计算的成本很高，但是自己搭建一个 Serverless 服务器，来运行自己的 Serverless 应用，则变成了一种更廉价的方式。除了直接基于 AWS 的 Serverless Framework 框架的方案，还有 OpenFaaS、Kubeless、OpenWhisk、Fission 等不同的 Serverless 框架。</p>
+<h2 id="7-API-Gateway-amp-BFF"><a href="#7-API-Gateway-amp-BFF" class="headerlink" title="7. API Gateway &amp; BFF"></a>7. API Gateway &amp; BFF</h2><h3 id="BFF"><a href="#BFF" class="headerlink" title="BFF"></a>BFF</h3><p>BFF，即 Backends For Frontends (服务于前端的后端)，也就是服务器设计 API 时会考虑客户端的使用情况，在服务端根据不同的设备类型，返回不同客户端所需要的结果。BFF 模式，这种模式不会为所有的客户端创建通用的 API。而是创建多个 BFF 服务：一个用于 Web 前端、一个用于移动客户端（甚至一个用于 iOS，另一个用于 Android）等等。</p>
+<h2 id="8-大前端：IoT"><a href="#8-大前端：IoT" class="headerlink" title="8. 大前端：IoT"></a>8. 大前端：IoT</h2><p>Web 应用的架构相比于一个物联网系统，无非就是多了一层硬件层以及可选的协调层。</p>
+<h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><h2 id="10"><a href="#10" class="headerlink" title="10."></a>10.</h2><h2 id="11"><a href="#11" class="headerlink" title="11."></a>11.</h2><h2 id="12"><a href="#12" class="headerlink" title="12."></a>12.</h2>
+    </div>
+</div>
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 109;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+        background-color: #fff;
+        max-height: calc(100vh - 92px);
+        transform: translateY(36px);
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            width: 88%
+        }
+    }
+</style>
+<script>
+    $(function () { $('#article').click(function (e) { if (e.target.tagName == "IMG") { if ($('#nonediv').length == 0) { let MImg = `<div id='noneimg'><img src='${e.target.currentSrc}'></div>`; let MDiv = "<div id='nonediv' style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'></div>"; $('#article').append(MDiv); $('#article').append(MImg); $("#nonediv").fadeIn("slow"); $("#noneimg img").fadeIn("slow") } } else { if ($('#nonediv').length !== 0) { $("#noneimg ").fadeOut("slow"); $("#nonediv").fadeOut("slow"); setTimeout(function () { $('#nonediv').remove(); $('#noneimg').remove() }, 500) } } }); $('.article-content').addClass('content-move') });
+</script>
+<div class="Last-Next">
+    
+    <a href="/2021/05/28/umi-%E7%AE%80%E4%BB%8B/">
+        <div class="last">
+            <span>上一篇</span>
+            <p>umi-简介</p>
+        </div>
+    </a>
+    
+
+    
+    <a href="/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90/">
+        <div class="next">
+            <span>下一篇</span>
+            <p>大前端-个人提升角度分析</p>
+        </div>
+    </a>
+    
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/kity.min.js"></script>
+
+
+<script src="/js/kityminder.core.min.js"></script>
+
+
+<script src="/js/mindmap.min.js"></script>
+
+		
+<link rel="stylesheet" href="/css/food.css">
+
+<div class="footer">
+	<div class="Copyright">
+		©2021 By Zyieng. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/zyieng">
+			<img src="https://z3.ax1x.com/2021/06/07/2wj9UJ.jpg" alt="Quiet主题">
+		</a>
+		
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: block;
+            border-radius: 50%;
+            width: 66px;
+            height: 66px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            transition: border .5s;
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 30px;
+            height: 30px;
+            margin-top: 17.5px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $('#js-go_top').gotoTop({ offset: 500, speed: 300, animationShow: { 'transform': 'translate(0,0)', 'transition': 'transform .5s ease-in-out' }, animationHide: { 'transform': 'translate(100px,0)', 'transition': 'transform .5s ease-in-out' } });
+</script>
+<script>
+	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+</script>
+	</body>
+
+</html>
