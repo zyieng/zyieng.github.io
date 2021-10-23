@@ -323,7 +323,9 @@
 <div class="article-content">
     <div id="article" class="content">
         <h1 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>角色：通知者和观察者<br>通知者：有变化通知观察者<br>观察者：收到变化响应变化</p>
-<h2 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs ecmascript">// 通知者<br>class Subject &#123;<br>  constructor() &#123;<br>    this.handlerEmit = []<br>  &#125;<br><br>  notice() &#123;<br>    this.handlerEmit.forEach((fn) =&gt; fn())<br>  &#125;<br>&#125;<br><br>// 观察者A<br>class ObserverA &#123;<br>  constructor() &#123;<br>      this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>// 观察者B<br>class ObserverB &#123;<br>  constructor() &#123;<br>    this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>const obA = new ObserverA()<br>const obB = new ObserverB()<br>const subject = new Subject()<br>subject.handlerEmit.push(obA,obB)<br>subject.notice()<br></code></pre></td></tr></table></figure>
+<h2 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h2><p>观察者模式+事件委托</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs ecmascript">// 通知者<br>class Subject &#123;<br>  constructor() &#123;<br>    this.handlerEmit = []<br>  &#125;<br><br>  notice() &#123;<br>    this.handlerEmit.forEach((fn) =&gt; fn())<br>  &#125;<br>&#125;<br><br>// 观察者A<br>class ObserverA &#123;<br>  constructor() &#123;<br>      this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>// 观察者B<br>class ObserverB &#123;<br>  constructor() &#123;<br>    this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>const obA = new ObserverA()<br>const obB = new ObserverB()<br>const subject = new Subject()<br>subject.handlerEmit.push(obA,obB)<br>subject.notice()<br></code></pre></td></tr></table></figure>
+
     </div>
 </div>
 <style>

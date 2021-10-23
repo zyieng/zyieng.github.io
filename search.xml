@@ -33,7 +33,9 @@
     <title>js观察者模式实现</title>
     <url>/2021/10/21/js%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<h1 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>角色：通知者和观察者<br>通知者：有变化通知观察者<br>观察者：收到变化响应变化</p>
-<h2 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs ecmascript">// 通知者<br>class Subject &#123;<br>  constructor() &#123;<br>    this.handlerEmit = []<br>  &#125;<br><br>  notice() &#123;<br>    this.handlerEmit.forEach((fn) =&gt; fn())<br>  &#125;<br>&#125;<br><br>// 观察者A<br>class ObserverA &#123;<br>  constructor() &#123;<br>      this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>// 观察者B<br>class ObserverB &#123;<br>  constructor() &#123;<br>    this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>const obA = new ObserverA()<br>const obB = new ObserverB()<br>const subject = new Subject()<br>subject.handlerEmit.push(obA,obB)<br>subject.notice()<br></code></pre></td></tr></table></figure>]]></content>
+<h2 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h2><p>观察者模式+事件委托</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs ecmascript">// 通知者<br>class Subject &#123;<br>  constructor() &#123;<br>    this.handlerEmit = []<br>  &#125;<br><br>  notice() &#123;<br>    this.handlerEmit.forEach((fn) =&gt; fn())<br>  &#125;<br>&#125;<br><br>// 观察者A<br>class ObserverA &#123;<br>  constructor() &#123;<br>      this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>// 观察者B<br>class ObserverB &#123;<br>  constructor() &#123;<br>    this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>const obA = new ObserverA()<br>const obB = new ObserverB()<br>const subject = new Subject()<br>subject.handlerEmit.push(obA,obB)<br>subject.notice()<br></code></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>设计模式</category>
         <category>工厂模式</category>
@@ -109,28 +111,6 @@
       </tags>
   </entry>
   <entry>
-    <title>大前端-个人提升角度分析</title>
-    <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h2 id="1-前端所占比重"><a href="#1-前端所占比重" class="headerlink" title="1. 前端所占比重"></a>1. 前端所占比重</h2><p>比重：往往懂前端的而后端且先到更容易有较高地位。</p>
-<p> to c 前后端都无地位。</p>
-<p>引出观点：无论前后端，都需要具备全站的知识涵盖范围。</p>
-<h2 id="2-团队规模决定前端"><a href="#2-团队规模决定前端" class="headerlink" title="2. 团队规模决定前端"></a>2. 团队规模决定前端</h2><p>决定因素：&gt; 业务体量  &gt; 团队规模</p>
-<h2 id="3-流水线式开发"><a href="#3-流水线式开发" class="headerlink" title="3. 流水线式开发"></a>3. 流水线式开发</h2><p>大型组织，需要更明确的分工，以便于机械工的生产更多的应用。</p>
-<p>也因此需要更明确的分工，来解决效率的问题。</p>
-<p>工具支撑团队<br>框架开发团队<br>业务开发团队<br>DevOps 团队</p>
-<h2 id="4-客户端多样式"><a href="#4-客户端多样式" class="headerlink" title="4. 客户端多样式"></a>4. 客户端多样式</h2><p>客户端开发的需求：微信小程度、桌面客户端、跨平台应用等等。</p>
-<h2 id="5-新的领域"><a href="#5-新的领域" class="headerlink" title="5. 新的领域"></a>5. 新的领域</h2><p>新的领域，存在更多机会。</p>
-<p>边缘计算<br>区块链<br>客户端计算<br>……</p>
-<h2 id="6-业务熟悉度"><a href="#6-业务熟悉度" class="headerlink" title="6. 业务熟悉度"></a>6. 业务熟悉度</h2><p>业务不熟悉无法带领团队。</p>
-]]></content>
-      <categories>
-        <category>大前端</category>
-      </categories>
-      <tags>
-        <tag>大前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>原型</title>
     <url>/2021/06/08/%E5%8E%9F%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="自己的理解"><a href="#自己的理解" class="headerlink" title="自己的理解"></a>自己的理解</h1><h2 id="从上到下"><a href="#从上到下" class="headerlink" title="从上到下"></a>从上到下</h2><p>我的理解，js的对象是一层层继承过来的，每层的一些属性都会记录在由该对象构造后的新对象的_protp_属性上。</p>
@@ -154,6 +134,28 @@
       </categories>
       <tags>
         <tag>Java Script</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大前端-个人提升角度分析</title>
+    <url>/2021/05/27/%E5%A4%A7%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h2 id="1-前端所占比重"><a href="#1-前端所占比重" class="headerlink" title="1. 前端所占比重"></a>1. 前端所占比重</h2><p>比重：往往懂前端的而后端且先到更容易有较高地位。</p>
+<p> to c 前后端都无地位。</p>
+<p>引出观点：无论前后端，都需要具备全站的知识涵盖范围。</p>
+<h2 id="2-团队规模决定前端"><a href="#2-团队规模决定前端" class="headerlink" title="2. 团队规模决定前端"></a>2. 团队规模决定前端</h2><p>决定因素：&gt; 业务体量  &gt; 团队规模</p>
+<h2 id="3-流水线式开发"><a href="#3-流水线式开发" class="headerlink" title="3. 流水线式开发"></a>3. 流水线式开发</h2><p>大型组织，需要更明确的分工，以便于机械工的生产更多的应用。</p>
+<p>也因此需要更明确的分工，来解决效率的问题。</p>
+<p>工具支撑团队<br>框架开发团队<br>业务开发团队<br>DevOps 团队</p>
+<h2 id="4-客户端多样式"><a href="#4-客户端多样式" class="headerlink" title="4. 客户端多样式"></a>4. 客户端多样式</h2><p>客户端开发的需求：微信小程度、桌面客户端、跨平台应用等等。</p>
+<h2 id="5-新的领域"><a href="#5-新的领域" class="headerlink" title="5. 新的领域"></a>5. 新的领域</h2><p>新的领域，存在更多机会。</p>
+<p>边缘计算<br>区块链<br>客户端计算<br>……</p>
+<h2 id="6-业务熟悉度"><a href="#6-业务熟悉度" class="headerlink" title="6. 业务熟悉度"></a>6. 业务熟悉度</h2><p>业务不熟悉无法带领团队。</p>
+]]></content>
+      <categories>
+        <category>大前端</category>
+      </categories>
+      <tags>
+        <tag>大前端</tag>
       </tags>
   </entry>
   <entry>
@@ -329,42 +331,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法-2</title>
-    <url>/2021/07/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-2/</url>
-    <content><![CDATA[<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>每次选择基准值<br>根据基准值进行排序<br>最糟糕情况需要遍历全部</p>
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>速度快，时间不会超过n^2</p>
-<h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><p>O(nlogn)<br><img src="https://z3.ax1x.com/2021/07/26/WRbFRx.png" alt="WRIgje.png"></p>
-<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>系统自带的排序为快排</p>
-<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么?"></a>是什么?</h2><ul>
-<li>跳出条件</li>
-<li>执行逻辑</li>
-<li>找到下一个元素，调用自己，知道找到元素或跳出。</li>
-</ul>
-<h1 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h1><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><ol>
-<li>找出基线条件，找出可抽象最基本处理规则。</li>
-<li>可以通过反复进行在上述规则处理从而得出最终结果。</li>
-</ol>
-<h1 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h1><h2 id="是什么？-1"><a href="#是什么？-1" class="headerlink" title="是什么？"></a>是什么？</h2><p>是一个按照某个分类平均分布的链表结构。</p>
-<h2 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h2><p>对节点的操作复杂度低。</p>
-<h1 id="广度优先算法"><a href="#广度优先算法" class="headerlink" title="广度优先算法"></a>广度优先算法</h1><h2 id="egg"><a href="#egg" class="headerlink" title="egg"></a>egg</h2><h3 id="找到途径车站最少的路径"><a href="#找到途径车站最少的路径" class="headerlink" title="找到途径车站最少的路径"></a>找到途径车站最少的路径</h3><ol>
-<li>找到只经过一个站点能到达的地方</li>
-<li>判断一个站点所能达到的地方是否包含重点，否则继续找两个站点能到达的地方<br>直到n个站点所能到达的地方包括终点。</li>
-</ol>
-<h1 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h1><p class="todo">名字不记得了，回去补充</p>
-
-<h3 id="找到途径时间最少的路径"><a href="#找到途径时间最少的路径" class="headerlink" title="找到途径时间最少的路径"></a>找到途径时间最少的路径</h3><blockquote>
-<p>每个边有权重，这个例子的权重就是两站之间所花费的时间</p>
-</blockquote>
-<p>记录每个站点的权重，然后找出时间花费最少的接着计算由他分散出去的各个节点的时间。</p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构与算法-1</title>
     <url>/2021/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-1/</url>
     <content><![CDATA[<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><ol>
@@ -414,46 +380,33 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法-概览</title>
-    <url>/2021/06/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%A6%82%E8%A7%88/</url>
-    <content><![CDATA[<h1 id="解决问题思路"><a href="#解决问题思路" class="headerlink" title="解决问题思路"></a>解决问题思路</h1><p>解决思路</p>
-<p><img style="width: 40%" src="https://z3.ax1x.com/2021/07/06/R7Dejf.png"></img></p>
-<h1 id="学习图谱"><a href="#学习图谱" class="headerlink" title="学习图谱"></a>学习图谱</h1><blockquote class="pullquote mindmap mindmap-md"><ul>
-<li>学习图谱<ul>
-<li>基础<ul>
-<li>基本数据结构</li>
-<li>大O(如何看复杂度)</li>
+    <title>数据结构与算法-2</title>
+    <url>/2021/07/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-2/</url>
+    <content><![CDATA[<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>每次选择基准值<br>根据基准值进行排序<br>最糟糕情况需要遍历全部</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>速度快，时间不会超过n^2</p>
+<h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><p>O(nlogn)<br><img src="https://z3.ax1x.com/2021/07/26/WRbFRx.png" alt="WRIgje.png"></p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>系统自带的排序为快排</p>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么?"></a>是什么?</h2><ul>
+<li>跳出条件</li>
+<li>执行逻辑</li>
+<li>找到下一个元素，调用自己，知道找到元素或跳出。</li>
 </ul>
-</li>
-<li>解决问题<ul>
-<li>散列表</li>
-<li>图</li>
-<li>分治</li>
-<li>动态规划</li>
-<li>贪心</li>
-</ul>
-</li>
-<li>进一步学习其他10种算法</li>
-</ul>
-</li>
-</ul>
-</blockquote>]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构与算法-3</title>
-    <url>/2021/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-3/</url>
-    <content><![CDATA[<h1 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>  对于某个目的的快速落地方案。</p>
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
-<li>求近似值。</li>
-<li>时间快</li>
-</ul>
-<h2 id="NP问题"><a href="#NP问题" class="headerlink" title="NP问题"></a>NP问题</h2><p>在众多要求中，优先选择核心的条件，是一个取舍问题。</p>
+<h1 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h1><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><ol>
+<li>找出基线条件，找出可抽象最基本处理规则。</li>
+<li>可以通过反复进行在上述规则处理从而得出最终结果。</li>
+</ol>
+<h1 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h1><h2 id="是什么？-1"><a href="#是什么？-1" class="headerlink" title="是什么？"></a>是什么？</h2><p>是一个按照某个分类平均分布的链表结构。</p>
+<h2 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h2><p>对节点的操作复杂度低。</p>
+<h1 id="广度优先算法"><a href="#广度优先算法" class="headerlink" title="广度优先算法"></a>广度优先算法</h1><h2 id="egg"><a href="#egg" class="headerlink" title="egg"></a>egg</h2><h3 id="找到途径车站最少的路径"><a href="#找到途径车站最少的路径" class="headerlink" title="找到途径车站最少的路径"></a>找到途径车站最少的路径</h3><ol>
+<li>找到只经过一个站点能到达的地方</li>
+<li>判断一个站点所能达到的地方是否包含重点，否则继续找两个站点能到达的地方<br>直到n个站点所能到达的地方包括终点。</li>
+</ol>
+<h1 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h1><p class="todo">名字不记得了，回去补充</p>
+
+<h3 id="找到途径时间最少的路径"><a href="#找到途径时间最少的路径" class="headerlink" title="找到途径时间最少的路径"></a>找到途径时间最少的路径</h3><blockquote>
+<p>每个边有权重，这个例子的权重就是两站之间所花费的时间</p>
+</blockquote>
+<p>记录每个站点的权重，然后找出时间花费最少的接着计算由他分散出去的各个节点的时间。</p>
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
@@ -470,6 +423,23 @@
 <h3 id="扩展（纯属自己没事瞎想）"><a href="#扩展（纯属自己没事瞎想）" class="headerlink" title="扩展（纯属自己没事瞎想）"></a>扩展（纯属自己没事瞎想）</h3><ul>
 <li>如果有一个二维数组，第一个维度按照权重大小排序生成一个映射关系m1，在根据第二个维度的权重大小生成一个映射关系m2，然后查找m1维度权重为m(n)，m2维度权重为m(o)为的元素,也就是m1(n)m2(o)，通过两个分发去查找。适合多维度数据的查找与操作。不适合精确查找，除非这个元素已知，或者范围查询。</li>
 </ul>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法-3</title>
+    <url>/2021/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-3/</url>
+    <content><![CDATA[<h1 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>  对于某个目的的快速落地方案。</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li>求近似值。</li>
+<li>时间快</li>
+</ul>
+<h2 id="NP问题"><a href="#NP问题" class="headerlink" title="NP问题"></a>NP问题</h2><p>在众多要求中，优先选择核心的条件，是一个取舍问题。</p>
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
@@ -527,6 +497,38 @@
       <tags>
         <tag>浏览器</tag>
         <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法-概览</title>
+    <url>/2021/06/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%A6%82%E8%A7%88/</url>
+    <content><![CDATA[<h1 id="解决问题思路"><a href="#解决问题思路" class="headerlink" title="解决问题思路"></a>解决问题思路</h1><p>解决思路</p>
+<p><img style="width: 40%" src="https://z3.ax1x.com/2021/07/06/R7Dejf.png"></img></p>
+<h1 id="学习图谱"><a href="#学习图谱" class="headerlink" title="学习图谱"></a>学习图谱</h1><blockquote class="pullquote mindmap mindmap-md"><ul>
+<li>学习图谱<ul>
+<li>基础<ul>
+<li>基本数据结构</li>
+<li>大O(如何看复杂度)</li>
+</ul>
+</li>
+<li>解决问题<ul>
+<li>散列表</li>
+<li>图</li>
+<li>分治</li>
+<li>动态规划</li>
+<li>贪心</li>
+</ul>
+</li>
+<li>进一步学习其他10种算法</li>
+</ul>
+</li>
+</ul>
+</blockquote>]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
       </tags>
   </entry>
   <entry>
