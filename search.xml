@@ -30,22 +30,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>js观察者模式实现</title>
-    <url>/2021/10/21/js%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<h1 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>角色：通知者和观察者<br>通知者：有变化通知观察者<br>观察者：收到变化响应变化</p>
-<h2 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h2><p>观察者模式+事件委托</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs ecmascript">// 通知者<br>class Subject &#123;<br>  constructor() &#123;<br>    this.handlerEmit = []<br>  &#125;<br><br>  notice() &#123;<br>    this.handlerEmit.forEach((fn) =&gt; fn())<br>  &#125;<br>&#125;<br><br>// 观察者A<br>class ObserverA &#123;<br>  constructor() &#123;<br>      this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>// 观察者B<br>class ObserverB &#123;<br>  constructor() &#123;<br>    this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>const obA = new ObserverA()<br>const obB = new ObserverB()<br>const subject = new Subject()<br>subject.handlerEmit.push(obA,obB)<br>subject.notice()<br></code></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>设计模式</category>
-        <category>工厂模式</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-        <tag>工厂模式</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>nvm-node管理机制</title>
     <url>/2021/07/08/nvm-node%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/</url>
     <content><![CDATA[<h1 id="nvm是如何管理你的node版本的？"><a href="#nvm是如何管理你的node版本的？" class="headerlink" title="nvm是如何管理你的node版本的？"></a>nvm是如何管理你的node版本的？</h1><p>在你切换时他会在c盘下生成一个快捷方式，这个快捷方式会指向你当前版本的包的地址。然后系统这边的Node相关配置永远都指向这个c盘的这个生成的快捷方式即可。</p>
@@ -72,6 +56,21 @@
       </tags>
   </entry>
   <entry>
+    <title>包管理</title>
+    <url>/2021/06/09/%E5%8C%85%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="如何引入node-modules里面的资源的？"><a href="#如何引入node-modules里面的资源的？" class="headerlink" title="如何引入node modules里面的资源的？"></a>如何引入node modules里面的资源的？</h1><p>在项目引入被封装成一个包的样式资源时，报错。原以为是包中关于icon的后缀名有问题，发现其它项目是可以直接用。不得不怀疑是否是路径存在问题。</p>
+<p>在大能的一步步指引下，终于明白我的问题点在哪了。首先我不了解这个包是如何被引进项目里的。我当时的认知停留在每个包文件下会有个入口文件，默认指向这个入口文件。这里其实还存在一个情况，如果该包里有一pakcage.json，里面有个main会指定这个包的入口文件。</p>
+]]></content>
+      <categories>
+        <category>package</category>
+        <category>webpack</category>
+      </categories>
+      <tags>
+        <tag>package</tag>
+        <tag>webpack</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>个人问题总结</title>
     <url>/2021/06/09/%E4%B8%AA%E4%BA%BA%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>急躁，遇事先思考。</p>
@@ -93,47 +92,6 @@
       <tags>
         <tag>个人提升</tag>
         <tag>每日打卡</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>包管理</title>
-    <url>/2021/06/09/%E5%8C%85%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h1 id="如何引入node-modules里面的资源的？"><a href="#如何引入node-modules里面的资源的？" class="headerlink" title="如何引入node modules里面的资源的？"></a>如何引入node modules里面的资源的？</h1><p>在项目引入被封装成一个包的样式资源时，报错。原以为是包中关于icon的后缀名有问题，发现其它项目是可以直接用。不得不怀疑是否是路径存在问题。</p>
-<p>在大能的一步步指引下，终于明白我的问题点在哪了。首先我不了解这个包是如何被引进项目里的。我当时的认知停留在每个包文件下会有个入口文件，默认指向这个入口文件。这里其实还存在一个情况，如果该包里有一pakcage.json，里面有个main会指定这个包的入口文件。</p>
-]]></content>
-      <categories>
-        <category>package</category>
-        <category>webpack</category>
-      </categories>
-      <tags>
-        <tag>package</tag>
-        <tag>webpack</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>原型</title>
-    <url>/2021/06/08/%E5%8E%9F%E5%9E%8B/</url>
-    <content><![CDATA[<h1 id="自己的理解"><a href="#自己的理解" class="headerlink" title="自己的理解"></a>自己的理解</h1><h2 id="从上到下"><a href="#从上到下" class="headerlink" title="从上到下"></a>从上到下</h2><p>我的理解，js的对象是一层层继承过来的，每层的一些属性都会记录在由该对象构造后的新对象的_protp_属性上。</p>
-<blockquote>
-<p>需要说明的是，像已经被构建为某个具体的对象（如对象、数组、字符串等）是一个本身不具有constructor的对象。但是它仍能调用这个方法，原因是因为他们都是由Object对象构建而来，而它有这个构造的方法。所以如果说你新建了一个具有某个属性的对象（如 let a = {name: ‘a’}），然后通过a.constructor去构建一个新对象，本身调用的是Object的构造方法。所以它的效果跟正常声明一个空对象是一样的，如下图。</p>
-</blockquote>
-<p><img src="https://z3.ax1x.com/2021/06/08/2BolvD.png" alt="糟糕！没有了！"></p>
-<p>在取新的被构建出来的对象的某个属性时，这里分为一下几种情况。</p>
-<p class="todo">有时间看看是否替换成表格能更加舒适</p>
-
-<p>第一、<br>该对象无这个属性，且继承过程中所涉及到的类也无此属性<br>返回undefniend<br>第二、<br>该对象无这个属性，且继承过程中某个类含有此属性<br>返回通过原型链可以拿到的最近的被继承类的属性值<br>第三、<br>该对象本身具有此属性，且继承过程中的某个类也含有该属性<br>返回自身的属性值</p>
-<blockquote>
-<p>可看出，在获取某个属性的时候，先判断按照自己本身，如若没有就接着通过原型链来获取在继承过程中，是否中间过程有该属性的类，有则返回里这个对象最近的这个属性。</p>
-</blockquote>
-<p class="todo">将来补充一下关系图</p>
-
-<h2 id="从下接着往下走"><a href="#从下接着往下走" class="headerlink" title="从下接着往下走"></a>从下接着往下走</h2><p>其实不难想象，把一个又一个还没有实例化的【类】抽象为我们熟知的类，然后将这种层层继承过来的过程想象成类的继承和实例化等，就可以通过面向对象的思路来去理解。那么js中的【类】是否可以也拥有传统面向对象的多态、继承等概念呢？<p class="todo">后期如果有了新的理解再补充。</p></p>
-]]></content>
-      <categories>
-        <category>Java Script</category>
-      </categories>
-      <tags>
-        <tag>Java Script</tag>
       </tags>
   </entry>
   <entry>
@@ -331,6 +289,32 @@
       </tags>
   </entry>
   <entry>
+    <title>原型</title>
+    <url>/2021/06/08/%E5%8E%9F%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="自己的理解"><a href="#自己的理解" class="headerlink" title="自己的理解"></a>自己的理解</h1><h2 id="从上到下"><a href="#从上到下" class="headerlink" title="从上到下"></a>从上到下</h2><p>我的理解，js的对象是一层层继承过来的，每层的一些属性都会记录在由该对象构造后的新对象的_protp_属性上。</p>
+<blockquote>
+<p>需要说明的是，像已经被构建为某个具体的对象（如对象、数组、字符串等）是一个本身不具有constructor的对象。但是它仍能调用这个方法，原因是因为他们都是由Object对象构建而来，而它有这个构造的方法。所以如果说你新建了一个具有某个属性的对象（如 let a = {name: ‘a’}），然后通过a.constructor去构建一个新对象，本身调用的是Object的构造方法。所以它的效果跟正常声明一个空对象是一样的，如下图。</p>
+</blockquote>
+<p><img src="https://z3.ax1x.com/2021/06/08/2BolvD.png" alt="糟糕！没有了！"></p>
+<p>在取新的被构建出来的对象的某个属性时，这里分为一下几种情况。</p>
+<p class="todo">有时间看看是否替换成表格能更加舒适</p>
+
+<p>第一、<br>该对象无这个属性，且继承过程中所涉及到的类也无此属性<br>返回undefniend<br>第二、<br>该对象无这个属性，且继承过程中某个类含有此属性<br>返回通过原型链可以拿到的最近的被继承类的属性值<br>第三、<br>该对象本身具有此属性，且继承过程中的某个类也含有该属性<br>返回自身的属性值</p>
+<blockquote>
+<p>可看出，在获取某个属性的时候，先判断按照自己本身，如若没有就接着通过原型链来获取在继承过程中，是否中间过程有该属性的类，有则返回里这个对象最近的这个属性。</p>
+</blockquote>
+<p class="todo">将来补充一下关系图</p>
+
+<h2 id="从下接着往下走"><a href="#从下接着往下走" class="headerlink" title="从下接着往下走"></a>从下接着往下走</h2><p>其实不难想象，把一个又一个还没有实例化的【类】抽象为我们熟知的类，然后将这种层层继承过来的过程想象成类的继承和实例化等，就可以通过面向对象的思路来去理解。那么js中的【类】是否可以也拥有传统面向对象的多态、继承等概念呢？<p class="todo">后期如果有了新的理解再补充。</p></p>
+]]></content>
+      <categories>
+        <category>Java Script</category>
+      </categories>
+      <tags>
+        <tag>Java Script</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构与算法-1</title>
     <url>/2021/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-1/</url>
     <content><![CDATA[<h1 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h1><ol>
@@ -380,6 +364,23 @@
       </tags>
   </entry>
   <entry>
+    <title>数据结构与算法-3</title>
+    <url>/2021/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-3/</url>
+    <content><![CDATA[<h1 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>  对于某个目的的快速落地方案。</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li>求近似值。</li>
+<li>时间快</li>
+</ul>
+<h2 id="NP问题"><a href="#NP问题" class="headerlink" title="NP问题"></a>NP问题</h2><p>在众多要求中，优先选择核心的条件，是一个取舍问题。</p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构与算法-2</title>
     <url>/2021/07/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-2/</url>
     <content><![CDATA[<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>每次选择基准值<br>根据基准值进行排序<br>最糟糕情况需要遍历全部</p>
@@ -416,48 +417,102 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法-想法记录</title>
-    <url>/2021/07/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%83%B3%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="关于查找的想法"><a href="#关于查找的想法" class="headerlink" title="关于查找的想法"></a>关于查找的想法</h1><h2 id="想法-散列表是二维的二分法"><a href="#想法-散列表是二维的二分法" class="headerlink" title="想法-散列表是二维的二分法"></a>想法-散列表是二维的二分法</h2><h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><p>排序、通过二分法查找</p>
-<h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><p>将树洗成左子树的权重始终比右子树大的这种排列方式，然后从中间开始找。树结构的二分法。</p>
-<h3 id="扩展（纯属自己没事瞎想）"><a href="#扩展（纯属自己没事瞎想）" class="headerlink" title="扩展（纯属自己没事瞎想）"></a>扩展（纯属自己没事瞎想）</h3><ul>
-<li>如果有一个二维数组，第一个维度按照权重大小排序生成一个映射关系m1，在根据第二个维度的权重大小生成一个映射关系m2，然后查找m1维度权重为m(n)，m2维度权重为m(o)为的元素,也就是m1(n)m2(o)，通过两个分发去查找。适合多维度数据的查找与操作。不适合精确查找，除非这个元素已知，或者范围查询。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构与算法-3</title>
-    <url>/2021/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-3/</url>
-    <content><![CDATA[<h1 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>  对于某个目的的快速落地方案。</p>
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
-<li>求近似值。</li>
-<li>时间快</li>
-</ul>
-<h2 id="NP问题"><a href="#NP问题" class="headerlink" title="NP问题"></a>NP问题</h2><p>在众多要求中，优先选择核心的条件，是一个取舍问题。</p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>浏览器</title>
-    <url>/2021/06/08/%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
-    <content><![CDATA[<h1 id="当在地址栏输入一个url后会发生什么？"><a href="#当在地址栏输入一个url后会发生什么？" class="headerlink" title="当在地址栏输入一个url后会发生什么？"></a>当在地址栏输入一个url后会发生什么？</h1><ol>
-<li>首先会解析域名，找到正确的ip地址，访问服务器。（此服务器为web服务器，如nginx）</li>
-<li>nginx会找对应的前端项目中获取html、css、js等资源。</li>
+    <url>/2021/10/26/%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="文献参考"><a href="#文献参考" class="headerlink" title="文献参考"></a>文献参考</h1><blockquote>
+<p>youtube 匠人学院澳洲</p>
+</blockquote>
+<h1 id="csr-client-side-Rendering"><a href="#csr-client-side-Rendering" class="headerlink" title="csr(client side Rendering)"></a>csr(client side Rendering)</h1><h2 id="过程、是什么？"><a href="#过程、是什么？" class="headerlink" title="过程、是什么？"></a>过程、是什么？</h2><p>1.首先会解析域名，找到正确的ip地址，访问服务器。（此服务器为web服务器，如nginx）<br>2.nginx会从Static Assets Host(s3)获取html、css、js等资源。<br>3.运行js。(FCP-First Contentful Paint)</p>
+<blockquote>
+<ul>
+<li>FCP(First Contentful Paint)</li>
+<li>首次内容绘制。当浏览器从文件模型（DOM）渲染第一块内容，第一次提供该页面在输入的回馈给使用者。</li>
+<li>首次内容绘制时间戳既是当浏览器第一次渲染任何文字、图片（包含背景图片），以及非空白的canvas标签或SVG<br>  向量图片排除任何iframe里的内容，但包含等待中的网络字体（webfonts）。</li>
+</ul>
+</blockquote>
+<p>4.请求API Server</p>
+<blockquote>
+<ul>
+<li>FMP，第一次有意义的绘制发生首屏布局更改ing加载Web字体之后的绘制。</li>
+<li>TTI，网站可以被访问的时间点。</li>
+</ul>
+</blockquote>
+<h2 id="为什么csr？"><a href="#为什么csr？" class="headerlink" title="为什么csr？"></a>为什么csr？</h2><p>1.前后端分离带来</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>1.SEO,CSR首次加载的HTML文档无内容，不利于SEO<br>2.CSR初始化页面会出现白屏，CSR的加载一般需要3个HTTP生命周期</p>
+<blockquote>
+<p>加载HTML文档-&gt;加载JS文件-&gt;API请求数据-&gt;根据数据渲染页面</p>
+</blockquote>
+<h1 id="SSR（Server-Side-Rendering）"><a href="#SSR（Server-Side-Rendering）" class="headerlink" title="SSR（Server Side Rendering）"></a>SSR（Server Side Rendering）</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1.用户发送请求给浏览器<br>2.用户通过UI Server来获取数据，并结合渲染模板生成Html<br>3.从Static Assets Host获取css、js资源<br>4.浏览器解析并运行javascrpt</p>
+<blockquote>
+<p>FCP=FMP</p>
+</blockquote>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>以前：JSP 、PHP<br>现在：起一个服务层</p>
+<h2 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h2><p>下载和运js、绑定事件完成前看到页面<br>API请求发生在服务端，理论上由于HTTP Call</p>
+<h1 id="JAMStack-amp-SSG"><a href="#JAMStack-amp-SSG" class="headerlink" title="JAMStack &amp; SSG"></a>JAMStack &amp; SSG</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>一种使用 Static Site Generator(SSG)技术、不依赖Web Server的前端技术</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>1.利用缓存技术进一步优化</p>
+<blockquote>
+<p>流失SSR、组件级缓存、模板化、HTML缓存</p>
+</blockquote>
+<p>2.继续在渲染模式上探索，采用静态渲染（Static Rendering）</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><table>
+<thead>
+<tr>
+<th></th>
+<th>CSR</th>
+<th>SSR</th>
+<th>SSG</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>渲染方式</td>
+<td>浏览器</td>
+<td>UI服务器</td>
+<td>CI服务器</td>
+</tr>
+<tr>
+<td>API调用</td>
+<td>浏览器-&gt;API外部调用</td>
+<td>UI服务器-&gt;API内部调用</td>
+<td>CI服务器-&gt;API内部调用</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>Request&lt;FCP&lt;&lt;FMP&lt;TTI</td>
+<td>Request&lt;&lt;FCP=FMP&lt;TTI</td>
+<td>Request&lt;FCP=FMP&lt;TTI</td>
+</tr>
+<tr>
+<td>SEO</td>
+<td>不支持</td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>技术栈</td>
+<td>React(Angular或Vue)</td>
+<td>React(Angular或Vue)、Node.js</td>
+<td>React(Angular或Vue)、Node.js、devops</td>
+</tr>
+<tr>
+<td>技术复杂度</td>
+<td>1</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>参考</td>
+<td></td>
+<td>Next.js</td>
+<td>Next.js、Gatsby.js、NUXT</td>
+</tr>
+</tbody></table>
+<h1 id="阻塞"><a href="#阻塞" class="headerlink" title="阻塞"></a>阻塞</h1><blockquote>
+<ul>
 <li>浏览器开始加载资源，如果js里有死循环可能会造成阻塞。</li>
 <li>在资源加载完毕后，如有ajax，ajax是浏览器层单独新建的一个进程，故在请求前后是不会阻塞</li>
 <li>ajax请求后，如有根据请求回的数据进行死循环，之前实现效果为不阻塞。（这个有待详细实验）</li>
-</ol>
+</ul>
+</blockquote>
 <p>html</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&#x27;div1&#x27;</span>&gt;</span>div1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
@@ -475,28 +530,19 @@
       </tags>
   </entry>
   <entry>
-    <title>浏览器获取资源</title>
-    <url>/2021/07/08/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90/</url>
-    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>最近开发的项目中有个奇怪的现象。<br>每次更新镜像，获取资源时如果在未获取完时刷新就会导致资源长时间获取被截断。（对资源大的有有明显影响）</p>
-<h1 id="触发现象"><a href="#触发现象" class="headerlink" title="触发现象"></a>触发现象</h1><p>更新镜像时在模块未加载时更新</p>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><ol>
-<li>更新镜像会导致线上对应的资源会更新。</li>
-<li>获取数据时按照之前的方式获取。</li>
-<li>刷新导致之后的资源还是用之前错误的方式获取。</li>
-<li>浏览器dns解析时会有一些缓存，可以试着猜想一下请求的缓存时的相应旧的请求方式是否也会缓存在计算机中。下回遇到可以尝试清系统缓存看看。</li>
-</ol>
-<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><ol>
-<li>减小大资源。可通过打包时的相应配置去控制。</li>
-<li>了解其机制，从根本原因下手。</li>
-</ol>
+    <title>数据结构与算法-想法记录</title>
+    <url>/2021/07/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%83%B3%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="关于查找的想法"><a href="#关于查找的想法" class="headerlink" title="关于查找的想法"></a>关于查找的想法</h1><h2 id="想法-散列表是二维的二分法"><a href="#想法-散列表是二维的二分法" class="headerlink" title="想法-散列表是二维的二分法"></a>想法-散列表是二维的二分法</h2><h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><p>排序、通过二分法查找</p>
+<h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><p>将树洗成左子树的权重始终比右子树大的这种排列方式，然后从中间开始找。树结构的二分法。</p>
+<h3 id="扩展（纯属自己没事瞎想）"><a href="#扩展（纯属自己没事瞎想）" class="headerlink" title="扩展（纯属自己没事瞎想）"></a>扩展（纯属自己没事瞎想）</h3><ul>
+<li>如果有一个二维数组，第一个维度按照权重大小排序生成一个映射关系m1，在根据第二个维度的权重大小生成一个映射关系m2，然后查找m1维度权重为m(n)，m2维度权重为m(o)为的元素,也就是m1(n)m2(o)，通过两个分发去查找。适合多维度数据的查找与操作。不适合精确查找，除非这个元素已知，或者范围查询。</li>
+</ul>
 ]]></content>
       <categories>
-        <category>网络</category>
-        <category>浏览器</category>
+        <category>数据结构与算法</category>
       </categories>
       <tags>
-        <tag>浏览器</tag>
-        <tag>网络</tag>
+        <tag>数据结构与算法</tag>
       </tags>
   </entry>
   <entry>
@@ -532,6 +578,22 @@
       </tags>
   </entry>
   <entry>
+    <title>设计模式-工厂模式</title>
+    <url>/2021/08/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="工厂模式是什么"><a href="#工厂模式是什么" class="headerlink" title="工厂模式是什么?"></a>工厂模式是什么?</h1><p>我的理解是：封装最基本的单元</p>
+<p>比如有一个工具箱，我们可以把工具箱里的每个工具封装成一个类，在使用某个工具是实例化这个工具。<br><img src="https://z3.ax1x.com/2021/08/02/fpC5qO.png" alt="fpC5qO.png"><br>这个工具可以手工的diy，也就是具备老旧工具功能的新工具。</p>
+<h1 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h1><p>可以方便的那这些零件去拼凑出自己想要的工具，增加代码可复用。</p>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p class="todo">有想法再补充</p>]]></content>
+      <categories>
+        <category>设计模式</category>
+        <category>工厂模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+        <tag>工厂模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网络学习笔记</title>
     <url>/2021/06/07/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="1-数据是如何传输的"><a href="#1-数据是如何传输的" class="headerlink" title="1. 数据是如何传输的"></a>1. 数据是如何传输的</h1><h2 id="1-网络传输过程"><a href="#1-网络传输过程" class="headerlink" title="1. 网络传输过程"></a>1. 网络传输过程</h2><ol>
@@ -550,43 +612,6 @@
       </categories>
       <tags>
         <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机系统-概述</title>
-    <url>/2021/07/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F-%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h1 id="计算机由硬件-amp-系统软件组成"><a href="#计算机由硬件-amp-系统软件组成" class="headerlink" title="计算机由硬件&amp;系统软件组成"></a>计算机由硬件&amp;系统软件组成</h1><ul>
-<li>系统中所有信息-包括磁盘文件、存储器中的程序、存储器中存放的用户数据以及网络上传送的数据都是由一串位表示的。</li>
-</ul>
-<h1 id="程序翻译执行过程"><a href="#程序翻译执行过程" class="headerlink" title="程序翻译执行过程"></a>程序翻译执行过程</h1><p>ASCII文本 -&gt; 二进制可执行文件（编辑器、链接器翻译） </p>
-<p><img src="https://z3.ax1x.com/2021/07/22/WBznyQ.png" alt="WBxwPf.png"></p>
-<h2 id="计算机运行程序时的图解"><a href="#计算机运行程序时的图解" class="headerlink" title="计算机运行程序时的图解"></a>计算机运行程序时的图解</h2><h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><h2 id="并行"><a href="#并行" class="headerlink" title="并行"></a>并行</h2><h1 id="操作系统内核是应用程序和硬件之间的媒介"><a href="#操作系统内核是应用程序和硬件之间的媒介" class="headerlink" title="操作系统内核是应用程序和硬件之间的媒介"></a>操作系统内核是应用程序和硬件之间的媒介</h1><ol>
-<li>文件是对 I/O设备的抽象</li>
-<li>虚拟存储器是对主存的和磁盘的抽象</li>
-<li>进程是对处理器、主存和I/O设备的抽象</li>
-</ol>
-]]></content>
-      <categories>
-        <category>计算机系统</category>
-      </categories>
-      <tags>
-        <tag>计算机系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计模式-工厂模式</title>
-    <url>/2021/08/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="工厂模式是什么"><a href="#工厂模式是什么" class="headerlink" title="工厂模式是什么?"></a>工厂模式是什么?</h1><p>我的理解是：封装最基本的单元</p>
-<p>比如有一个工具箱，我们可以把工具箱里的每个工具封装成一个类，在使用某个工具是实例化这个工具。<br><img src="https://z3.ax1x.com/2021/08/02/fpC5qO.png" alt="fpC5qO.png"><br>这个工具可以手工的diy，也就是具备老旧工具功能的新工具。</p>
-<h1 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h1><p>可以方便的那这些零件去拼凑出自己想要的工具，增加代码可复用。</p>
-<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p class="todo">有想法再补充</p>]]></content>
-      <categories>
-        <category>设计模式</category>
-        <category>工厂模式</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-        <tag>工厂模式</tag>
       </tags>
   </entry>
   <entry>
@@ -622,6 +647,27 @@
       </tags>
   </entry>
   <entry>
+    <title>计算机系统-概述</title>
+    <url>/2021/07/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F-%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="计算机由硬件-amp-系统软件组成"><a href="#计算机由硬件-amp-系统软件组成" class="headerlink" title="计算机由硬件&amp;系统软件组成"></a>计算机由硬件&amp;系统软件组成</h1><ul>
+<li>系统中所有信息-包括磁盘文件、存储器中的程序、存储器中存放的用户数据以及网络上传送的数据都是由一串位表示的。</li>
+</ul>
+<h1 id="程序翻译执行过程"><a href="#程序翻译执行过程" class="headerlink" title="程序翻译执行过程"></a>程序翻译执行过程</h1><p>ASCII文本 -&gt; 二进制可执行文件（编辑器、链接器翻译） </p>
+<p><img src="https://z3.ax1x.com/2021/07/22/WBznyQ.png" alt="WBxwPf.png"></p>
+<h2 id="计算机运行程序时的图解"><a href="#计算机运行程序时的图解" class="headerlink" title="计算机运行程序时的图解"></a>计算机运行程序时的图解</h2><h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><h2 id="并行"><a href="#并行" class="headerlink" title="并行"></a>并行</h2><h1 id="操作系统内核是应用程序和硬件之间的媒介"><a href="#操作系统内核是应用程序和硬件之间的媒介" class="headerlink" title="操作系统内核是应用程序和硬件之间的媒介"></a>操作系统内核是应用程序和硬件之间的媒介</h1><ol>
+<li>文件是对 I/O设备的抽象</li>
+<li>虚拟存储器是对主存的和磁盘的抽象</li>
+<li>进程是对处理器、主存和I/O设备的抽象</li>
+</ol>
+]]></content>
+      <categories>
+        <category>计算机系统</category>
+      </categories>
+      <tags>
+        <tag>计算机系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高数-函数</title>
     <url>/2021/07/20/%E9%AB%98%E6%95%B0-%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<h1 id="什么是函数"><a href="#什么是函数" class="headerlink" title="什么是函数"></a>什么是函数</h1><p>x -&gt; f(x) 只有一个</p>
@@ -631,6 +677,22 @@
       </categories>
       <tags>
         <tag>高数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js观察者模式实现</title>
+    <url>/2021/10/21/js%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h1 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>角色：通知者和观察者<br>通知者：有变化通知观察者<br>观察者：收到变化响应变化</p>
+<h2 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h2><p>观察者模式+事件委托</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs ecmascript">// 通知者<br>class Subject &#123;<br>  constructor() &#123;<br>    this.handlerEmit = []<br>  &#125;<br><br>  notice() &#123;<br>    this.handlerEmit.forEach((fn) =&gt; fn())<br>  &#125;<br>&#125;<br><br>// 观察者A<br>class ObserverA &#123;<br>  constructor() &#123;<br>      this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>// 观察者B<br>class ObserverB &#123;<br>  constructor() &#123;<br>    this.handler = ()=&gt;(&#x27;console.log(handlerA)&#x27;)<br>  &#125;<br>&#125;<br><br>const obA = new ObserverA()<br>const obB = new ObserverB()<br>const subject = new Subject()<br>subject.handlerEmit.push(obA,obB)<br>subject.notice()<br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>设计模式</category>
+        <category>工厂模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+        <tag>工厂模式</tag>
       </tags>
   </entry>
 </search>
